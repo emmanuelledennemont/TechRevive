@@ -30,7 +30,8 @@ struct TabBarView: View {
                         .toolbarBackground(.visible, for: .tabBar) // Définit un fond de barre d'outils visible
                 }
             }
-            .accentColor(.orange)        }
+            .accentColor(.orange)
+        }
     }
 }
 
