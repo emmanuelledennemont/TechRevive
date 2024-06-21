@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+enum RepairStatus: String {
+    case readyToRepair = "A réparer"
+    case repairing = "En réparation"
+    case repared = "Déjà réparer"
+}

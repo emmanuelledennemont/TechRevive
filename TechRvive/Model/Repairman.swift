@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+struct Repairman {
+    let id =  UUID().uuidString
+    var name : String
+    var info : String
+    var adress : String
+    var phoneNumber : String
+    var openingHours : String
+    var reparingCategory : ReparingCategory
+
+}
+
+
+
+

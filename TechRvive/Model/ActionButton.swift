@@ -6,3 +6,23 @@
 //
 
 import Foundation
+
+enum ActionButton: String {
+    case nav = "Itinéraire"
+    case rdv = "RDV"
+    case call = "Appel"
+    case fav = "Favori"
+
+    var imageName: String {
+        switch self {
+        case .nav:
+            return "arrow.uturn.right.square.fill"
+        case .rdv:
+            return "calendar"
+        case .call:
+            return "phone.fill"
+        case .fav:
+            return "start"
+        }
+    }
+}

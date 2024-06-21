@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct User {
+    let id = UUID().uuidString
+    var name: String
+    var repairlistScheduled : [ProductRepairs]
+    var repairListArchive : [ProductRepairs]
+    var co2Eco : Double
+    var eurEco : Double
+    var favReparmain : [Repairman]
+
+
+}
