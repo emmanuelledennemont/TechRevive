@@ -6,23 +6,25 @@
 //
 
 import Foundation
+import SwiftUI
 
-    enum ReparingCategory: String {
+enum ReparingCategory: String, CaseIterable  {
         case bigElec = "Gros électroménager"
         case smallElec = "Petit Electroménager "
         case device = "Device"
         case mobility = "e-Mobilité"
+       
 
         var imageName: String {
             switch self {
             case .bigElec:
                 return "washer.fill"
             case .smallElec:
-                return "microwave"
+                return "microwave.fill"
             case .device:
                 return "iphone"
             case .mobility:
-                return "bicycle"
+                return "bicycle.circle"
             }
         }
     }

@@ -6,13 +6,24 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct SwiftUIViewTest: View {
+    var repairman : Repairman
+    @State var ispresented = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            ForEach(ReparingCategory.allCases, id: \.rawValue ) { raw in 
+                ComponentElementsTypeOfReperman(imageName: raw.imageName, background: true, color: false)
+
+            }
+        }
+
+
     }
 }
 
 #Preview {
-    SwiftUIViewTest()
+    SwiftUIViewTest(repairman: Repairman(name: "Ryad", info: "Tout type de réparation", adress: CLLocationCoordinate2D(latitude: 47.90232, longitude: -3.390290), phoneNumber: "0823942834", openingHours: "6-19h", reparingCategory: .mobility))
 }

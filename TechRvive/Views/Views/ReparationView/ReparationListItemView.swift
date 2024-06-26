@@ -34,6 +34,6 @@ struct ReparationListItemView: View {
 
 #Preview {
     NavigationView {
-        ReparationListItemView(productRepair: ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec))
+        ReparationListItemView(productRepair: ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec, date: Date()))
     }
 }

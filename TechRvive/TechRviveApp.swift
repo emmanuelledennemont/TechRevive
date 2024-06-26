@@ -11,7 +11,8 @@ import SwiftUI
 struct TechRviveApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //LandingPage()
+            MapView(repairmen: repairmenExemple)
         }
     }
 }

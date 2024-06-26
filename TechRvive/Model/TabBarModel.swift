@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import MapKit
 import SwiftUI
 
 // Définition de l'énumération Tab avec des cas spécifiques
@@ -33,15 +33,18 @@ enum Tab: String, CaseIterable {
     var view: some View {
            switch self {
            case .carte:
-               ReparationView(user: User(name: "", repairlistScheduled: [ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec),ProductRepairs(productName: "Angell Bike", modelName: "ANG123456789", breakDownInfo: "Problème de Batterie", idRepairMan: "hhfd", reparingCategory: .mobility)], repairListArchive: [], co2Eco: 0.0, eurEco: 0.0, favReparmain: []))
+               MapView(repairmen: repairmenExemple)
            case .calendrier:
-               ReparationView(user: User(name: "", repairlistScheduled: [ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec),ProductRepairs(productName: "Angell Bike", modelName: "ANG123456789", breakDownInfo: "Problème de Batterie", idRepairMan: "hhfd", reparingCategory: .mobility)], repairListArchive: [], co2Eco: 0.0, eurEco: 0.0, favReparmain: []))
+               MapView(repairmen: repairmenExemple)
            case .reparations:
-               ReparationView(user: User(name: "", repairlistScheduled: [ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec),ProductRepairs(productName: "Angell Bike", modelName: "ANG123456789", breakDownInfo: "Problème de Batterie", idRepairMan: "hhfd", reparingCategory: .mobility)], repairListArchive: [], co2Eco: 0.0, eurEco: 0.0, favReparmain: []))
+               MapView(repairmen: repairmenExemple)
+              // ReparationView(user: userTest)
            case .profil:
-               ReparationView(user: User(name: "", repairlistScheduled: [ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec)], repairListArchive: [], co2Eco: 0.0, eurEco: 0.0, favReparmain: []))
+               MapView(repairmen: repairmenExemple)
            }
        }
+
+
    }
 
     

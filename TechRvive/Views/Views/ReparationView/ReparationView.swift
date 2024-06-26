@@ -41,7 +41,7 @@ struct ReparationView: View {
 
 #Preview {
     NavigationView {
-        ReparationView(user: User(name: "", repairlistScheduled: [ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec),ProductRepairs(productName: "Angell Bike", modelName: "ANG123456789", breakDownInfo: "Problème de Batterie", idRepairMan: "hhfd", reparingCategory: .mobility)], repairListArchive: [], co2Eco: 0.0, eurEco: 0.0, favReparmain: []) )
+       ReparationView(user: userTest )
     }
 
 

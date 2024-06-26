@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		D98C49882C25A63E0010CA2D /* TechRviveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C49872C25A63E0010CA2D /* TechRviveApp.swift */; };
-		D98C498A2C25A63E0010CA2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C49892C25A63E0010CA2D /* ContentView.swift */; };
 		D98C498C2C25A6400010CA2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D98C498B2C25A6400010CA2D /* Assets.xcassets */; };
 		D98C498F2C25A6400010CA2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D98C498E2C25A6400010CA2D /* Preview Assets.xcassets */; };
 		E3261F052C25DC0B0039DEA5 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = E3261F042C25DC0B0039DEA5 /* .gitattributes */; };
+		E34D0B9B2C29B165004E14D9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D0B9A2C29B165004E14D9 /* MapView.swift */; };
+		E34D0B9F2C2AAE94004E14D9 /* InfoRepairmainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D0B9E2C2AAE94004E14D9 /* InfoRepairmainView.swift */; };
+		E34D0BA12C2AB0DB004E14D9 /* ComponentElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D0BA02C2AB0DB004E14D9 /* ComponentElements.swift */; };
+		E352C38F2C2B09D200587B0D /* ReparationScheduledListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352C38E2C2B09D200587B0D /* ReparationScheduledListView.swift */; };
+		E352C3912C2B0A3100587B0D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352C3902C2B0A3100587B0D /* Data.swift */; };
+		E352C3942C2B0FB500587B0D /* Repairmen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352C3932C2B0FB500587B0D /* Repairmen.swift */; };
+		E352C3962C2BFF7200587B0D /* SwiftUIViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352C3952C2BFF7200587B0D /* SwiftUIViewTest.swift */; };
 		E3D12E152C25B27E00890AD3 /* Repairman.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E142C25B27E00890AD3 /* Repairman.swift */; };
 		E3D12E172C25B38A00890AD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E162C25B38A00890AD3 /* User.swift */; };
 		E3D12E192C25B4EE00890AD3 /* ProductRepairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E182C25B4EE00890AD3 /* ProductRepairs.swift */; };
@@ -22,16 +28,22 @@
 		E3D12E242C25BD0800890AD3 /* ReparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E232C25BD0800890AD3 /* ReparationView.swift */; };
 		E3D12E272C25BDA800890AD3 /* ReparationListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E262C25BDA800890AD3 /* ReparationListItemView.swift */; };
 		E3D12E292C25BDBA00890AD3 /* ReparationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E282C25BDBA00890AD3 /* ReparationDetailView.swift */; };
-		E3D12E2D2C25CE9E00890AD3 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E2C2C25CE9E00890AD3 /* TabBarView.swift */; };
+		E3D12E2D2C25CE9E00890AD3 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D98C49842C25A63E0010CA2D /* TechRvive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechRvive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98C49872C25A63E0010CA2D /* TechRviveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechRviveApp.swift; sourceTree = "<group>"; };
-		D98C49892C25A63E0010CA2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D98C498B2C25A6400010CA2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D98C498E2C25A6400010CA2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3261F042C25DC0B0039DEA5 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		E34D0B9A2C29B165004E14D9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E34D0B9E2C2AAE94004E14D9 /* InfoRepairmainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRepairmainView.swift; sourceTree = "<group>"; };
+		E34D0BA02C2AB0DB004E14D9 /* ComponentElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentElements.swift; sourceTree = "<group>"; };
+		E352C38E2C2B09D200587B0D /* ReparationScheduledListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparationScheduledListView.swift; sourceTree = "<group>"; };
+		E352C3902C2B0A3100587B0D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		E352C3932C2B0FB500587B0D /* Repairmen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repairmen.swift; sourceTree = "<group>"; };
+		E352C3952C2BFF7200587B0D /* SwiftUIViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewTest.swift; sourceTree = "<group>"; };
 		E3D12E142C25B27E00890AD3 /* Repairman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repairman.swift; sourceTree = "<group>"; };
 		E3D12E162C25B38A00890AD3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E3D12E182C25B4EE00890AD3 /* ProductRepairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepairs.swift; sourceTree = "<group>"; };
@@ -42,7 +54,7 @@
 		E3D12E232C25BD0800890AD3 /* ReparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReparationView.swift; sourceTree = "<group>"; };
 		E3D12E262C25BDA800890AD3 /* ReparationListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReparationListItemView.swift; sourceTree = "<group>"; };
 		E3D12E282C25BDBA00890AD3 /* ReparationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReparationDetailView.swift; sourceTree = "<group>"; };
-		E3D12E2C2C25CE9E00890AD3 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				D98C49872C25A63E0010CA2D /* TechRviveApp.swift */,
-				D98C49892C25A63E0010CA2D /* ContentView.swift */,
 				E3D12E222C25BCD600890AD3 /* Views */,
 				E3D12E132C25B23300890AD3 /* Model */,
+				E352C3922C2B0A5E00587B0D /* Data */,
 				D98C498B2C25A6400010CA2D /* Assets.xcassets */,
 				D98C498D2C25A6400010CA2D /* Preview Content */,
 			);
@@ -94,10 +106,55 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E34D0B992C29B134004E14D9 /* MapsView */ = {
+			isa = PBXGroup;
+			children = (
+				E34D0B9A2C29B165004E14D9 /* MapView.swift */,
+				E34D0B9E2C2AAE94004E14D9 /* InfoRepairmainView.swift */,
+			);
+			path = MapsView;
+			sourceTree = "<group>";
+		};
+		E34D0BA22C2AB0E6004E14D9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E34D0BA02C2AB0DB004E14D9 /* ComponentElements.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E352C38C2C2B084500587B0D /* ReparationList */ = {
+			isa = PBXGroup;
+			children = (
+				E352C38E2C2B09D200587B0D /* ReparationScheduledListView.swift */,
+			);
+			path = ReparationList;
+			sourceTree = "<group>";
+		};
+		E352C38D2C2B092A00587B0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E34D0B992C29B134004E14D9 /* MapsView */,
+				E352C38C2C2B084500587B0D /* ReparationList */,
+				E3D12E252C25BD5F00890AD3 /* ReparationView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E352C3922C2B0A5E00587B0D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E352C3902C2B0A3100587B0D /* Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		E3D12E132C25B23300890AD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E3D12E142C25B27E00890AD3 /* Repairman.swift */,
+				E352C3952C2BFF7200587B0D /* SwiftUIViewTest.swift */,
+				E352C3932C2B0FB500587B0D /* Repairmen.swift */,
 				E3D12E1E2C25B7E700890AD3 /* ReparingCategory.swift */,
 				E3D12E162C25B38A00890AD3 /* User.swift */,
 				E3D12E182C25B4EE00890AD3 /* ProductRepairs.swift */,
@@ -111,8 +168,9 @@
 		E3D12E222C25BCD600890AD3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E3D12E2C2C25CE9E00890AD3 /* TabBarView.swift */,
-				E3D12E252C25BD5F00890AD3 /* ReparationView */,
+				E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */,
+				E34D0BA22C2AB0E6004E14D9 /* Component */,
+				E352C38D2C2B092A00587B0D /* Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,18 +257,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D12E172C25B38A00890AD3 /* User.swift in Sources */,
+				E352C3942C2B0FB500587B0D /* Repairmen.swift in Sources */,
 				E3D12E192C25B4EE00890AD3 /* ProductRepairs.swift in Sources */,
-				E3D12E2D2C25CE9E00890AD3 /* TabBarView.swift in Sources */,
-				D98C498A2C25A63E0010CA2D /* ContentView.swift in Sources */,
+				E352C38F2C2B09D200587B0D /* ReparationScheduledListView.swift in Sources */,
+				E3D12E2D2C25CE9E00890AD3 /* LandingPage.swift in Sources */,
 				E3D12E242C25BD0800890AD3 /* ReparationView.swift in Sources */,
+				E34D0B9B2C29B165004E14D9 /* MapView.swift in Sources */,
 				E3D12E152C25B27E00890AD3 /* Repairman.swift in Sources */,
 				E3D12E272C25BDA800890AD3 /* ReparationListItemView.swift in Sources */,
 				E3D12E1B2C25B64F00890AD3 /* RepairStatus.swift in Sources */,
 				E3D12E212C25BB0400890AD3 /* ActionButton.swift in Sources */,
 				E3D12E292C25BDBA00890AD3 /* ReparationDetailView.swift in Sources */,
+				E34D0B9F2C2AAE94004E14D9 /* InfoRepairmainView.swift in Sources */,
+				E352C3962C2BFF7200587B0D /* SwiftUIViewTest.swift in Sources */,
 				E3D12E1D2C25B72F00890AD3 /* TabBarModel.swift in Sources */,
+				E352C3912C2B0A3100587B0D /* Data.swift in Sources */,
 				D98C49882C25A63E0010CA2D /* TechRviveApp.swift in Sources */,
 				E3D12E1F2C25B7E700890AD3 /* ReparingCategory.swift in Sources */,
+				E34D0BA12C2AB0DB004E14D9 /* ComponentElements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +410,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TechRvive/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Nous avons besoin de votre localisation pour trouver des réparateur près de vous";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -374,6 +439,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TechRvive/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Nous avons besoin de votre localisation pour trouver des réparateur près de vous";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

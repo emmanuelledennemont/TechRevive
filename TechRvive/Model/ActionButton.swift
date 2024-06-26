@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ActionButton: String {
+enum ActionButton: String, CaseIterable {
     case nav = "Itinéraire"
     case rdv = "RDV"
     case call = "Appel"

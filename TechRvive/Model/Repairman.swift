@@ -6,17 +6,20 @@
 //
 
 import Foundation
+import CoreLocation
 
-struct Repairman {
-    let id =  UUID().uuidString
+struct Repairman : Identifiable {
+    let id =  UUID()
     var name : String
     var info : String
-    var adress : String
+    var adress : CLLocationCoordinate2D
     var phoneNumber : String
     var openingHours : String
     var reparingCategory : ReparingCategory
 
 }
+
+
 
 
 
