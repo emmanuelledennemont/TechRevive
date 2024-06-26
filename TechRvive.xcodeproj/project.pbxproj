@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				D98C49872C25A63E0010CA2D /* TechRviveApp.swift */,
-				E3D12E222C25BCD600890AD3 /* Views */,
+				E3D12E222C25BCD600890AD3 /* Pages */,
 				E3D12E132C25B23300890AD3 /* Model */,
 				E352C3922C2B0A5E00587B0D /* Data */,
 				D98C498B2C25A6400010CA2D /* Assets.xcassets */,
@@ -165,14 +165,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E3D12E222C25BCD600890AD3 /* Views */ = {
+		E3D12E222C25BCD600890AD3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
 				E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */,
 				E34D0BA22C2AB0E6004E14D9 /* Component */,
 				E352C38D2C2B092A00587B0D /* Views */,
 			);
-			path = Views;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		E3D12E252C25BD5F00890AD3 /* ReparationView */ = {
