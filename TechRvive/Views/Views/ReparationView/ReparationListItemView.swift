@@ -12,8 +12,8 @@ struct ReparationListItemView: View {
     var productRepair : ProductRepairs
     var body: some View {
         HStack(alignment: .top) {
-            Image(systemName: productRepair.reparingCategory.imageName).font(.system(size: 45))
-                .foregroundColor(.orange)
+            ComponentElementsTypeOfReperman(imageName: productRepair.reparingCategory.imageName, background: true, color: false).padding(.horizontal, 8.0)
+
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(productRepair.productName)

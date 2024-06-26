@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabBarView: View {
+struct LandingPage: View {
     var body: some View {
         HStack(spacing: 0) {
             TabView {
@@ -30,5 +30,5 @@ struct TabBarView: View {
 }
 
 #Preview {
-    TabBarView()
+    LandingPage()
 }
