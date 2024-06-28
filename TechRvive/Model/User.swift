@@ -16,5 +16,20 @@ struct User {
     var eurEco : Double
     var favReparmain : Repairmen
 
+    func howManyToday() -> String {
+        let dateFormatter = DateFormatter()
+        var count = 0
+        for productRepair in repairlistScheduled {
+        print(productRepair.date)
+        print(Date())
+            if dateFormatter.string(from:productRepair.date) == dateFormatter.string(from: Date()) {
 
+                count += 1
+
+            }
+
+
+        }
+        return count.description
+    }
 }

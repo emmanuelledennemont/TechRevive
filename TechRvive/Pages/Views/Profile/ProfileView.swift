@@ -10,6 +10,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    var user : User
     var body: some View {
         NavigationView {
             ScrollView {
@@ -20,12 +21,12 @@ struct ProfileView: View {
                         .padding(.leading)
                     
                     HStack(spacing: 16) {
-                        StatView(imageName: "calendar", title: "Aujourd'hui", value: "0", backgroundColor: Color(UIColor.systemGray6))
-                        StatView(imageName: "calendar", title: "Programmé", value: "3", backgroundColor: Color(UIColor.systemGray6))
+                        StatView(imageName: "calendar", title: "Aujourd'hui", value: user.howManyToday(), backgroundColor: Color(UIColor.systemGray6))
+                        StatView(imageName: "calendar", title: "Programmé", value: "\(user.repairlistScheduled.count)", backgroundColor: Color(UIColor.systemGray6))
                     }
                     .padding(.horizontal)
                     
-                    StatView(imageName: "tray", title: "Archivé", value: "1", backgroundColor: Color(UIColor.systemGray6))
+                    StatView(imageName: "tray", title: "Archivé", value: "\(user.repairListArchive.count)", backgroundColor: Color(UIColor.systemGray6))
                         .padding(.horizontal)
                     
                        
@@ -61,6 +62,6 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(user: userTest)
 }
 

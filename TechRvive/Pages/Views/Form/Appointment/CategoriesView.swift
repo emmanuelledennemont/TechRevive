@@ -43,7 +43,7 @@ struct CategoryButton: View {
 
     var body: some View {
         Button(action: {
-            selectedCategory = category
+           selectedCategory = category
         }) {
             VStack {
 

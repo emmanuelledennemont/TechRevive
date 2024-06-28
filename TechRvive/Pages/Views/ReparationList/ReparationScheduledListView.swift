@@ -7,7 +7,7 @@ struct ReparationScheduledListView: View {
     @State  var user : User
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView() {
                 ForEach(user.repairlistScheduled) { repair in
 

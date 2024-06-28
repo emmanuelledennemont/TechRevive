@@ -40,7 +40,7 @@ enum Tab: String, CaseIterable {
                AnyView( ReparationView(user: userTest ))
               
            case .profil:
-               AnyView( ProfileView())
+               AnyView( ProfileView(user: userTest))
            }
        }
 

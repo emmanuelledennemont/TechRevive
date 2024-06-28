@@ -19,31 +19,34 @@ struct ReparationView: View {
     }
     
     var body: some View {
-        List {
-            Section(header: VStack(alignment: .leading) {
-                Text("Mes Reparations à venir")
-                    .font(.title2).foregroundStyle(.black).textCase(.none).fontWeight(.bold)
-                Spacer().frame(height: 10)
-            }) {
-                ForEach(scheduledRepairs) { productRepair in
-                    NavigationLink(destination: ReparationDetailView()) {
-                        ReparationListItemView(productRepair: productRepair)
+        NavigationStack{
+            List {
+                Section(header: VStack(alignment: .leading) {
+                    Text("Mes Reparations à venir")
+                        .font(.title2).foregroundStyle(.black).textCase(.none).fontWeight(.bold)
+                    Spacer().frame(height: 10)
+                }) {
+                    ForEach(scheduledRepairs) { productRepair in
+                        NavigationLink(destination: ReparationDetailView()) {
+                            ReparationListItemView(productRepair: productRepair)
+                        }
                     }
                 }
-            }
-            
-            Section(header: VStack(alignment: .leading) {
-                Text("Historique de Réparations")
-                    .font(.title2).foregroundStyle(.black).textCase(.none).fontWeight(.bold)
-                Spacer().frame(height: 10)
-            }) {
-                ForEach(archivedRepairs) { productRepair in
-                    NavigationLink(destination: ReparationDetailView()) {
-                        ReparationListItemView(productRepair: productRepair)
+
+                Section(header: VStack(alignment: .leading) {
+                    Text("Historique de Réparations")
+                        .font(.title2).foregroundStyle(.black).textCase(.none).fontWeight(.bold)
+                    Spacer().frame(height: 10)
+                }) {
+                    ForEach(archivedRepairs) { productRepair in
+                        NavigationLink(destination: ReparationDetailView()) {
+                            ReparationListItemView(productRepair: productRepair)
+                        }
                     }
                 }
             }
         }
+
     }
 }
 

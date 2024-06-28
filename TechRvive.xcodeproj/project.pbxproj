@@ -171,7 +171,9 @@
 		E352C3992C2D554C00587B0D /* Appointment */ = {
 			isa = PBXGroup;
 			children = (
+				E35983532C2DA9F900F2A61C /* DatePicker.swift */,
 				E352C39A2C2D560B00587B0D /* AppointmentView.swift */,
+				E35983512C2DA9AD00F2A61C /* CategoriesView.swift */,
 			);
 			path = Appointment;
 			sourceTree = "<group>";
@@ -181,8 +183,6 @@
 			children = (
 				E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */,
 				E352C3992C2D554C00587B0D /* Appointment */,
-				E35983532C2DA9F900F2A61C /* DatePicker.swift */,
-				E35983512C2DA9AD00F2A61C /* CategoriesView.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
