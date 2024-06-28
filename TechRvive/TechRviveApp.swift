@@ -11,8 +11,8 @@ import SwiftUI
 struct TechRviveApp: App {
     var body: some Scene {
         WindowGroup {
-            //LandingPage()
-            MapView(repairmen: repairmenExemple)
+            AppointmentView(reparman:  parisRepairmen.repairmenListe[0])
+           // MapView(repairmen: repairmenExemple)
         }
     }
 }

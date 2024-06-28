@@ -77,7 +77,7 @@ struct ReparationScheduledListView: View {
                 Spacer()
             }
             .padding()
-            .navigationBarTitle("Tableau de bord")
+            .navigationBarTitle("Mes Prochain RDV ")
         }
     }
     

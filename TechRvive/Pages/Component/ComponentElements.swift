@@ -35,14 +35,14 @@ struct ComponentElementsTypeOfReperman: View {
                     .foregroundStyle(Color(.systemGray6)).frame(width: 75)
             }
 
-            Image(systemName: imageName).foregroundStyle(colorForeground).font(.system(size: 40))
+            Image(systemName: imageName).foregroundStyle(color ? Color.orange : Color(.systemGray2)).font(.system(size: 40))
 
         }
-        .task {
-            if color {
-                colorForeground = Color(.orange)
-            }
-        }
+//        .task {
+//            if color {
+//                colorForeground = Color(.orange)
+//            }
+//        }
     }
 }
 

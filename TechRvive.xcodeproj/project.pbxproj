@@ -18,6 +18,17 @@
 		E352C3912C2B0A3100587B0D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352C3902C2B0A3100587B0D /* Data.swift */; };
 		E352C3942C2B0FB500587B0D /* Repairmen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352C3932C2B0FB500587B0D /* Repairmen.swift */; };
 		E352C3962C2BFF7200587B0D /* SwiftUIViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352C3952C2BFF7200587B0D /* SwiftUIViewTest.swift */; };
+		E352C39B2C2D560B00587B0D /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352C39A2C2D560B00587B0D /* AppointmentView.swift */; };
+		E35983522C2DA9AD00F2A61C /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983512C2DA9AD00F2A61C /* CategoriesView.swift */; };
+		E35983542C2DA9F900F2A61C /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983532C2DA9F900F2A61C /* DatePicker.swift */; };
+		E359835C2C2DB47900F2A61C /* EcoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983572C2DB47900F2A61C /* EcoView.swift */; };
+		E359835D2C2DB47900F2A61C /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983582C2DB47900F2A61C /* FavoriteView.swift */; };
+		E359835E2C2DB47900F2A61C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983592C2DB47900F2A61C /* ProfileView.swift */; };
+		E359835F2C2DB47900F2A61C /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E359835A2C2DB47900F2A61C /* StatView.swift */; };
+		E35983642C2DB93500F2A61C /* ReparationListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983602C2DB93500F2A61C /* ReparationListItemView.swift */; };
+		E35983652C2DB93500F2A61C /* ReparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983612C2DB93500F2A61C /* ReparationView.swift */; };
+		E3936E762C2E0C7400AEA85C /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */; };
+		E3936E782C2E0C9C00AEA85C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3936E772C2E0C9C00AEA85C /* Text.swift */; };
 		E3D12E152C25B27E00890AD3 /* Repairman.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E142C25B27E00890AD3 /* Repairman.swift */; };
 		E3D12E172C25B38A00890AD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E162C25B38A00890AD3 /* User.swift */; };
 		E3D12E192C25B4EE00890AD3 /* ProductRepairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E182C25B4EE00890AD3 /* ProductRepairs.swift */; };
@@ -25,9 +36,6 @@
 		E3D12E1D2C25B72F00890AD3 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E1C2C25B72F00890AD3 /* TabBarModel.swift */; };
 		E3D12E1F2C25B7E700890AD3 /* ReparingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E1E2C25B7E700890AD3 /* ReparingCategory.swift */; };
 		E3D12E212C25BB0400890AD3 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E202C25BB0400890AD3 /* ActionButton.swift */; };
-		E3D12E242C25BD0800890AD3 /* ReparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E232C25BD0800890AD3 /* ReparationView.swift */; };
-		E3D12E272C25BDA800890AD3 /* ReparationListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E262C25BDA800890AD3 /* ReparationListItemView.swift */; };
-		E3D12E292C25BDBA00890AD3 /* ReparationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E282C25BDBA00890AD3 /* ReparationDetailView.swift */; };
 		E3D12E2D2C25CE9E00890AD3 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +52,17 @@
 		E352C3902C2B0A3100587B0D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E352C3932C2B0FB500587B0D /* Repairmen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repairmen.swift; sourceTree = "<group>"; };
 		E352C3952C2BFF7200587B0D /* SwiftUIViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewTest.swift; sourceTree = "<group>"; };
+		E352C39A2C2D560B00587B0D /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
+		E35983512C2DA9AD00F2A61C /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		E35983532C2DA9F900F2A61C /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		E35983572C2DB47900F2A61C /* EcoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcoView.swift; sourceTree = "<group>"; };
+		E35983582C2DB47900F2A61C /* FavoriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		E35983592C2DB47900F2A61C /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E359835A2C2DB47900F2A61C /* StatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
+		E35983602C2DB93500F2A61C /* ReparationListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparationListItemView.swift; sourceTree = "<group>"; };
+		E35983612C2DB93500F2A61C /* ReparationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparationView.swift; sourceTree = "<group>"; };
+		E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
+		E3936E772C2E0C9C00AEA85C /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		E3D12E142C25B27E00890AD3 /* Repairman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repairman.swift; sourceTree = "<group>"; };
 		E3D12E162C25B38A00890AD3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E3D12E182C25B4EE00890AD3 /* ProductRepairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepairs.swift; sourceTree = "<group>"; };
@@ -51,9 +70,6 @@
 		E3D12E1C2C25B72F00890AD3 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		E3D12E1E2C25B7E700890AD3 /* ReparingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReparingCategory.swift; sourceTree = "<group>"; };
 		E3D12E202C25BB0400890AD3 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		E3D12E232C25BD0800890AD3 /* ReparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReparationView.swift; sourceTree = "<group>"; };
-		E3D12E262C25BDA800890AD3 /* ReparationListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReparationListItemView.swift; sourceTree = "<group>"; };
-		E3D12E282C25BDBA00890AD3 /* ReparationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReparationDetailView.swift; sourceTree = "<group>"; };
 		E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,9 +150,11 @@
 		E352C38D2C2B092A00587B0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E359835B2C2DB47900F2A61C /* Profile */,
+				E35983632C2DB93500F2A61C /* Reparation */,
 				E34D0B992C29B134004E14D9 /* MapsView */,
 				E352C38C2C2B084500587B0D /* ReparationList */,
-				E3D12E252C25BD5F00890AD3 /* ReparationView */,
+				E35983502C2DA99B00F2A61C /* Form */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,9 +162,49 @@
 		E352C3922C2B0A5E00587B0D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E3936E772C2E0C9C00AEA85C /* Text.swift */,
 				E352C3902C2B0A3100587B0D /* Data.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		E352C3992C2D554C00587B0D /* Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				E352C39A2C2D560B00587B0D /* AppointmentView.swift */,
+			);
+			path = Appointment;
+			sourceTree = "<group>";
+		};
+		E35983502C2DA99B00F2A61C /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */,
+				E352C3992C2D554C00587B0D /* Appointment */,
+				E35983532C2DA9F900F2A61C /* DatePicker.swift */,
+				E35983512C2DA9AD00F2A61C /* CategoriesView.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		E359835B2C2DB47900F2A61C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E35983572C2DB47900F2A61C /* EcoView.swift */,
+				E35983582C2DB47900F2A61C /* FavoriteView.swift */,
+				E35983592C2DB47900F2A61C /* ProfileView.swift */,
+				E359835A2C2DB47900F2A61C /* StatView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E35983632C2DB93500F2A61C /* Reparation */ = {
+			isa = PBXGroup;
+			children = (
+				E35983602C2DB93500F2A61C /* ReparationListItemView.swift */,
+				E35983612C2DB93500F2A61C /* ReparationView.swift */,
+			);
+			path = Reparation;
 			sourceTree = "<group>";
 		};
 		E3D12E132C25B23300890AD3 /* Model */ = {
@@ -173,16 +231,6 @@
 				E352C38D2C2B092A00587B0D /* Views */,
 			);
 			path = Pages;
-			sourceTree = "<group>";
-		};
-		E3D12E252C25BD5F00890AD3 /* ReparationView */ = {
-			isa = PBXGroup;
-			children = (
-				E3D12E232C25BD0800890AD3 /* ReparationView.swift */,
-				E3D12E262C25BDA800890AD3 /* ReparationListItemView.swift */,
-				E3D12E282C25BDBA00890AD3 /* ReparationDetailView.swift */,
-			);
-			path = ReparationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,20 +305,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D12E172C25B38A00890AD3 /* User.swift in Sources */,
+				E3936E762C2E0C7400AEA85C /* ConfirmationView.swift in Sources */,
 				E352C3942C2B0FB500587B0D /* Repairmen.swift in Sources */,
 				E3D12E192C25B4EE00890AD3 /* ProductRepairs.swift in Sources */,
 				E352C38F2C2B09D200587B0D /* ReparationScheduledListView.swift in Sources */,
 				E3D12E2D2C25CE9E00890AD3 /* LandingPage.swift in Sources */,
-				E3D12E242C25BD0800890AD3 /* ReparationView.swift in Sources */,
 				E34D0B9B2C29B165004E14D9 /* MapView.swift in Sources */,
+				E359835E2C2DB47900F2A61C /* ProfileView.swift in Sources */,
+				E35983542C2DA9F900F2A61C /* DatePicker.swift in Sources */,
 				E3D12E152C25B27E00890AD3 /* Repairman.swift in Sources */,
-				E3D12E272C25BDA800890AD3 /* ReparationListItemView.swift in Sources */,
+				E35983522C2DA9AD00F2A61C /* CategoriesView.swift in Sources */,
+				E35983652C2DB93500F2A61C /* ReparationView.swift in Sources */,
 				E3D12E1B2C25B64F00890AD3 /* RepairStatus.swift in Sources */,
+				E352C39B2C2D560B00587B0D /* AppointmentView.swift in Sources */,
+				E359835C2C2DB47900F2A61C /* EcoView.swift in Sources */,
+				E35983642C2DB93500F2A61C /* ReparationListItemView.swift in Sources */,
 				E3D12E212C25BB0400890AD3 /* ActionButton.swift in Sources */,
-				E3D12E292C25BDBA00890AD3 /* ReparationDetailView.swift in Sources */,
+				E359835D2C2DB47900F2A61C /* FavoriteView.swift in Sources */,
+				E359835F2C2DB47900F2A61C /* StatView.swift in Sources */,
 				E34D0B9F2C2AAE94004E14D9 /* InfoRepairmainView.swift in Sources */,
 				E352C3962C2BFF7200587B0D /* SwiftUIViewTest.swift in Sources */,
 				E3D12E1D2C25B72F00890AD3 /* TabBarModel.swift in Sources */,
+				E3936E782C2E0C9C00AEA85C /* Text.swift in Sources */,
 				E352C3912C2B0A3100587B0D /* Data.swift in Sources */,
 				D98C49882C25A63E0010CA2D /* TechRviveApp.swift in Sources */,
 				E3D12E1F2C25B7E700890AD3 /* ReparingCategory.swift in Sources */,

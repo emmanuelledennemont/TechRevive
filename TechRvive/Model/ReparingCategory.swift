@@ -8,9 +8,11 @@
 import Foundation
 import SwiftUI
 
-enum ReparingCategory: String, CaseIterable  {
-        case bigElec = "Gros électroménager"
-        case smallElec = "Petit Electroménager "
+enum ReparingCategory: String, CaseIterable, Identifiable {
+    var id: String { self.rawValue }
+
+        case bigElec = "Gros électro"
+        case smallElec = "Petit électro "
         case device = "Device"
         case mobility = "e-Mobilité"
        

@@ -5,15 +5,17 @@
 //  Created by Ezequiel Gomes on 21/06/2024.
 //
 
-import Foundation
 import SwiftUI
+import Foundation
 
 struct ReparationListItemView: View {
-    var productRepair : ProductRepairs
+    var productRepair: ProductRepairs
+
     var body: some View {
         HStack(alignment: .top) {
-            ComponentElementsTypeOfReperman(imageName: productRepair.reparingCategory.imageName, background: true, color: false).padding(.horizontal, 8.0)
+            ComponentElementsTypeOfReperman(imageName: productRepair.reparingCategory.imageName, background: false, color: true)
 
+            .padding(.horizontal, 2.0)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(productRepair.productName)
@@ -27,13 +29,19 @@ struct ReparationListItemView: View {
             }
         }
         .padding(.vertical, 8)
-        .listRowBackground(Color.green)
-    };
+    }
 }
-
 
 #Preview {
     NavigationView {
-        ReparationListItemView(productRepair: ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec, date: Date()))
+        ReparationListItemView(productRepair: ProductRepairs(
+            productName: "LG InstaView Door-in-Door",
+            modelName: "LMXS28596S",
+            repairStatus: .repared,
+            breakDownInfo: "Accumulation de Glace",
+            idRepairMan: "hhfd",
+            reparingCategory: .bigElec,
+            date: Date()
+        ))
     }
 }

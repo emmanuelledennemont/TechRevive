@@ -33,14 +33,14 @@ enum Tab: String, CaseIterable {
     var view: some View {
            switch self {
            case .carte:
-               MapView(repairmen: repairmenExemple)
+               AnyView( MapView(repairmen: repairmenExemple))
            case .calendrier:
-               MapView(repairmen: repairmenExemple)
+               AnyView( ReparationScheduledListView(user: userTest))
            case .reparations:
-               MapView(repairmen: repairmenExemple)
-              // ReparationView(user: userTest)
+               AnyView( ReparationView(user: userTest ))
+              
            case .profil:
-               MapView(repairmen: repairmenExemple)
+               AnyView( ProfileView())
            }
        }
 
