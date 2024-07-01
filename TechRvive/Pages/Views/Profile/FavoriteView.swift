@@ -17,7 +17,7 @@ struct FavoriteView: View {
             Image(imageName)
                 .resizable()
                 .frame(width: 40, height: 40)
-                .clipShape(Circle())
+                .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.trailing, 8)
 
             VStack(alignment: .leading) {

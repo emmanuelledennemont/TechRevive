@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct AppointmentView: View {
+    @EnvironmentObject var user : User
     @Environment(\.dismiss) var dismiss
-    @Binding var user : User
+   
 
     let reparman : Repairman
     @ObservedObject var infoRepair = ProductRepairs()
@@ -67,10 +68,7 @@ struct AppointmentView: View {
                         }
                     }
                     Section("Vos information ") {
-                        HStack{
-                            Text("Nom:")
-                            TextField("Description de la panne", text: $infoRepair.productName)
-                        }
+                        ProfilComponent()
                     }
                     Section("Choisir votre date") {
                         DatePickerView(selectedDate: $infoRepair.date)
@@ -123,9 +121,9 @@ struct AppointmentView: View {
     }
 
 
-#Preview {
-    NavigationStack {
-        AppointmentView(user: .constant(userTest), reparman: parisRepairmen.repairmenListe[0], showConfirmation:.constant(false))
-    }
-
-}
+//#Preview {
+//    NavigationStack {
+//        AppointmentView( reparman: repairmen[0], showConfirmation:.constant(false))
+//    }
+//
+//}

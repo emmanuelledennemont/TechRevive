@@ -39,6 +39,7 @@
 		E378ECA92C317A6600050802 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECA82C317A6600050802 /* SearchView.swift */; };
 		E378ECAB2C31930600050802 /* ButtonShettHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECAA2C31930600050802 /* ButtonShettHelpers.swift */; };
 		E378ECAD2C32B36000050802 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECAC2C32B36000050802 /* Splash.swift */; };
+		E378ECAF2C32DE1900050802 /* ProfilComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECAE2C32DE1900050802 /* ProfilComponent.swift */; };
 		E3936E762C2E0C7400AEA85C /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */; };
 		E3936E782C2E0C9C00AEA85C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3936E772C2E0C9C00AEA85C /* Text.swift */; };
 		E3D12E152C25B27E00890AD3 /* Repairman.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E142C25B27E00890AD3 /* Repairman.swift */; };
@@ -85,6 +86,7 @@
 		E378ECA82C317A6600050802 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E378ECAA2C31930600050802 /* ButtonShettHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonShettHelpers.swift; sourceTree = "<group>"; };
 		E378ECAC2C32B36000050802 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		E378ECAE2C32DE1900050802 /* ProfilComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilComponent.swift; sourceTree = "<group>"; };
 		E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		E3936E772C2E0C9C00AEA85C /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		E3D12E142C25B27E00890AD3 /* Repairman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repairman.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		E34D0BA22C2AB0E6004E14D9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				E378ECAE2C32DE1900050802 /* ProfilComponent.swift */,
 				E378ECA62C30113500050802 /* ProgressionView.swift */,
 				E378ECA42C3010B700050802 /* ListItemCardComponent.swift */,
 				E378ECA22C3010AF00050802 /* DescriptionCardComponent.swift */,
@@ -395,6 +398,7 @@
 				D98C49882C25A63E0010CA2D /* TechRviveApp.swift in Sources */,
 				E3D12E1F2C25B7E700890AD3 /* ReparingCategory.swift in Sources */,
 				E34D0BA12C2AB0DB004E14D9 /* ComponentElements.swift in Sources */,
+				E378ECAF2C32DE1900050802 /* ProfilComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

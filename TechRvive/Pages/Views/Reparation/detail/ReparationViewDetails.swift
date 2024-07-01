@@ -79,8 +79,8 @@ struct ReparationViewDetails: View {
     
 }
 
-struct ReparationViewDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        ReparationViewDetails(productRepair: productRparDataSample[0])
-    }
-}
+//struct ReparationViewDetails_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ReparationViewDetails(productRepair: productRparDataSample[0])
+//    }
+//}

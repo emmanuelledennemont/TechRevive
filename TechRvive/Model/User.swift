@@ -7,16 +7,36 @@
 
 import Foundation
 
-struct User {
+class User : Observable, ObservableObject {
     let id = UUID()
-    var name: String
-    var repairlistScheduled : [ProductRepairs]
-    var repairListArchive : [ProductRepairs]
-    var co2Eco : Double
-    var eurEco : Double
-    var favReparmain : Repairmen
+    var image : String
+   @Published var name: String
+    @Published  var repairlistScheduled : [ProductRepairs]
+    @Published  var repairListArchive : [ProductRepairs]
+    @Published var co2Eco : Double
+    @Published  var eurEco : Double
+    @Published  var favReparmain : Repairmen
+     var adressMail : String
+     var telephone : String
 
-    func howManyToday() -> String {
+
+
+    init(image: String, name: String, repairlistScheduled: [ProductRepairs], repairListArchive: [ProductRepairs], co2Eco: Double, eurEco: Double, favReparmain: Repairmen, adressMail: String, telephone: String) {
+        self.image = image
+        self.name = name
+        self.repairlistScheduled = repairlistScheduled
+        self.repairListArchive = repairListArchive
+        self.co2Eco = co2Eco
+        self.eurEco = eurEco
+        self.favReparmain = favReparmain
+        self.adressMail = adressMail
+        self.telephone = telephone
+    }
+
+
+
+
+    func howManyToday() -> Int {
         let dateFormatter = DateFormatter()
         var count = 0
         for productRepair in repairlistScheduled {
@@ -30,6 +50,6 @@ struct User {
 
 
         }
-        return count.description
+        return count
     }
 }

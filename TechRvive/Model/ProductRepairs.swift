@@ -13,7 +13,7 @@ class ProductRepairs : ObservableObject, Identifiable  {
     let id = UUID()
     @Published var productName : String
     @Published  var modelName : String
-    var repairStatus : RepairStatus = .repared
+    var repairStatus : RepairStatus = .readyToRepair
     @Published var breakDownInfo : String
     @Published var idRepairMan : UUID
     @Published var reparingCategory : ReparingCategory
@@ -73,7 +73,7 @@ class ProductRepairs : ObservableObject, Identifiable  {
     }
 
     func findRepairman() -> Repairman? {
-        return repairmenExemple.findRepairmen(id: idRepairMan)
+        return Repairmen(repairmenListe: repairmen).findRepairmen(id: idRepairMan)
     }
 
 

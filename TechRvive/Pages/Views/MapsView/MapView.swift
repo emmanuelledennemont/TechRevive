@@ -10,7 +10,7 @@ import MapKit
 
 struct MapView: View {
 
-    @State var user : User
+  
     @State var inputSearch = ""
     @State var selectedCategorie = ReparingCategory.bigElec
     @State  private var userLocation : MapCameraPosition = .userLocation(fallback: .automatic)
@@ -29,7 +29,7 @@ struct MapView: View {
 
                         Annotation(repairman.name, coordinate:repairman.adress){
                             NavigationLink {
-                                RepairmainInfoView(user: $user, repairman: repairman)
+                                RepairmainInfoView(repairman: repairman)
                             } label: {
                                 ComponentElementsButtonMap(imageName: repairman.reparingCategory.imageName)
                             }
@@ -46,56 +46,48 @@ struct MapView: View {
                     }
 
 
-
                 }.mapControls({
                     MapCompass()
                     MapUserLocationButton().foregroundStyle(.orange)
                     MapScaleView()
 
 
-
-
-
-
                 })
-                VStack {
-
-                    Button {
-                        isPresented.toggle()
-                    } label: {
-                       Label("Recherche", systemImage: "character.textbox")
-                }
-                    Spacer()
-                }
+              
 
 
             }
 
 
             .navigationTitle("Carte").navigationBarHidden(true)
-            .sheet(isPresented: $isPresented, content: {
 
-                SearchView(cameraposition: $userLocation)
-                    .padding()
-                
-                .presentationDetents([.height(60), .medium, .large])
-                .presentationCornerRadius(20)
-                .presentationBackground(.regularMaterial)
-                .presentationBackgroundInteraction(.enabled(upThrough: .large))
-                .interactiveDismissDisabled()
+        }.sheet(isPresented: $isPresented, content: {
 
-        })
+            SearchView()
+                .padding()
 
-        }
+            .presentationDetents([.height(90), .medium, .large])
+            .presentationCornerRadius(20)
+            .presentationBackground(Color(.systemGray6))
+            .presentationBackgroundInteraction(.enabled(upThrough: .large))
+            .interactiveDismissDisabled()
+            .bottomMaskForSheet()
+
+    })
+
 
             .onAppear{
                 CLLocationManager().requestWhenInUseAuthorization()
+
+            }.task {
+                isPresented = true
             }
+
 
     }
 }
 
 #Preview {
-    MapView(user: userTest, repairmen: repairmenExemple)
+    MapView( repairmen: Repairmen(repairmenListe: repairmen))
 }
 

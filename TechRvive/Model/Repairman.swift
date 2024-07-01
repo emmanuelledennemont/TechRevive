@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 struct Repairman : Identifiable {
-    var image = ""
+    var image : String
     let id =  UUID()
     var name : String
     var info : String

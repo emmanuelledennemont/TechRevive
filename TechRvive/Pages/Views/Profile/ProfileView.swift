@@ -10,7 +10,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    var user : User
+    @EnvironmentObject var user : User
     var body: some View {
         NavigationView {
             ScrollView {
@@ -21,12 +21,12 @@ struct ProfileView: View {
                         .padding(.leading)
                     
                     HStack(spacing: 16) {
-                        StatView(imageName: "calendar", title: "Aujourd'hui", value: user.howManyToday(), backgroundColor: Color(UIColor.systemGray6))
-                        StatView(imageName: "calendar", title: "Programmé", value: "\(user.repairlistScheduled.count)", backgroundColor: Color(UIColor.systemGray6))
+                        StatView(imageName: "calendar", title: "Aujourd'hui", value: user.howManyToday().description, backgroundColor: (user.howManyToday() > 0) ? Color(.orange): Color(.systemGray))
+                        StatView(imageName: "calendar", title: "Programmé", value: "\(user.repairlistScheduled.count)", backgroundColor: (user.repairlistScheduled.count > 0) ? Color(.orange): Color(.systemGray))
                     }
                     .padding(.horizontal)
                     
-                    StatView(imageName: "tray", title: "Archivé", value: "\(user.repairListArchive.count)", backgroundColor: Color(UIColor.systemGray6))
+                    StatView(imageName: "tray", title: "Archivé", value: "\(user.repairListArchive.count)", backgroundColor: (user.repairListArchive.count > 0) ? Color(.orange): Color(.systemGray))
                         .padding(.horizontal)
                     
                        
@@ -47,8 +47,12 @@ struct ProfileView: View {
                         .padding(.leading)
                     
                     VStack(spacing: 8) {
-                        FavoriteView(imageName: "repair1", name: "Repartout", address: "Rue Arènes Romaines, 31100 Toulouse")
-                        FavoriteView(imageName: "repair2", name: "Ryadrepar", address: "3 Rue Lucien Sampaix, 75010 Paris")
+                        ForEach(user.favReparmain.repairmenListe) { repairmain in
+
+                            FavoriteView(imageName: repairmain.image, name: repairmain.name, address:"" )
+
+
+                        }
                     }
                     .padding(.horizontal)
                     
@@ -62,6 +66,6 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView(user: userTest)
+    ProfileView().environment(userTest)
 }
 

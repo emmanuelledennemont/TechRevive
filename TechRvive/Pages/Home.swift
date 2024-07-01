@@ -9,10 +9,12 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        HStack(spacing: 0) {
-            ZStack {
+
+
                 TabView {
                     // Boucle à travers tous les cas de l'énumération Tab
+
+
                     ForEach(Tab.allCases, id: \.rawValue) { tab in
                         // Affiche le texte correspondant au cas de l'énumération
                         tab.view
@@ -26,8 +28,8 @@ struct Home: View {
                     }
                 }
                 .accentColor(.orange)
-            }
-        }
+
+
     }
 }
 

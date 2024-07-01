@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-struct Repairmen {
+struct Repairmen  {
     var repairmenListe : [Repairman]
 
 

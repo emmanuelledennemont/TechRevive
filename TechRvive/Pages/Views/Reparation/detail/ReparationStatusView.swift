@@ -62,6 +62,6 @@ struct ReparationStatusView: View {
        }
 }
 
-    #Preview {
-        ReparationStatusView(productRepair: productRparDataSample[0], descriptionPanne: "Ne marche pas")
-    }
+//    #Preview {
+//       // ReparationStatusView(productRepair: re, descriptionPanne: "Ne marche pas")
+//    }

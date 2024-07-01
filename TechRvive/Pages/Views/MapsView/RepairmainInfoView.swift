@@ -10,7 +10,6 @@ import MapKit
 
 struct RepairmainInfoView: View {
 
-    @Binding var user : User
     @State  var repairman : Repairman
     @State var adress = ""
     @State var isPresented = false
@@ -51,7 +50,7 @@ struct RepairmainInfoView: View {
                     // Action Buttons
                     HStack(spacing : 20) {
                         NavigationLink {
-                            AppointmentView(user: $user, reparman: repairman, showConfirmation: $isPresented)
+                            AppointmentView(reparman: repairman, showConfirmation: $isPresented)
                         } label: {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10).stroke(.gray, lineWidth: 0).background(Color(.systemGray6)).clipShape(RoundedRectangle(cornerRadius: 10)).frame( width : 75 , height: 60 )
@@ -162,7 +161,7 @@ struct RepairmainInfoView: View {
 
                     // Appointment Button
                     NavigationLink {
-                        AppointmentView(user: $user, reparman: repairman, showConfirmation: $isPresented)
+                        AppointmentView(reparman: repairman, showConfirmation: $isPresented)
                     } label: {
                         Text("Prendre un RDV")
                             .fontWeight(.bold)
@@ -202,7 +201,7 @@ struct RepairmainInfoView: View {
 
 }
 #Preview {
-    RepairmainInfoView (user: .constant(userTest), repairman: parisRepairmen.repairmenListe[0])
+    RepairmainInfoView (repairman: repairmen[0])
 }
 
 

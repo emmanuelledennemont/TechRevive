@@ -4,7 +4,7 @@
 import SwiftUI
 
 struct ReparationScheduledListView: View {
-    @State  var user : User
+    @EnvironmentObject  var user : User
 
     var body: some View {
         NavigationStack {
@@ -139,5 +139,5 @@ struct BottomShadowModifier: ViewModifier {
 }
 
 #Preview {
-    ReparationScheduledListView(user: userTest)
+    ReparationScheduledListView()
 }

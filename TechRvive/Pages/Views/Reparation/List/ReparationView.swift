@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ReparationView: View {
-    let user : User
-    
+    @EnvironmentObject var user : User
+
     var scheduledRepairs: [ProductRepairs] {
         user.repairlistScheduled.filter { $0.repairStatus != .repared }
     }
@@ -65,11 +65,7 @@ struct ReparationView: View {
 
 #Preview {
     NavigationView {
-        ReparationView(user: User(name: "", repairlistScheduled: [
-            ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", repairStatus: .readyToRepair, breakDownInfo: "Accumulation de Glace", idRepairMan: UUID(), reparingCategory: .bigElec, date: Date()),
-
-            ProductRepairs(productName: "Angell Bike", modelName: "ANG123456789", repairStatus: .repared, breakDownInfo: "Problème de Batterie", idRepairMan: UUID(), reparingCategory: .mobility, date: Date())
-        ], repairListArchive: [], co2Eco: 0.0, eurEco: 0.0, favReparmain: repairmenFav))
+        ReparationView()
     }
 }
 struct ReparationDetailView: View {

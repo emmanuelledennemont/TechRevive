@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct TechRviveApp: App {
+
+    let user = userTest
     var body: some Scene {
         WindowGroup {
+
+
            //AppointmentView(reparman:  parisRepairmen.repairmenListe[0])
            // MapView(repairmen: repairmenExemple)
-           Splash()
+            Splash().environment(user)
 
         }
     }

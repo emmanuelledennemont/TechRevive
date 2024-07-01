@@ -20,11 +20,11 @@ struct StatView: View {
                     ZStack {
                         Circle()
                             .frame(height: 40 )
-                            .foregroundColor(Color(.systemGray2))
+                            .foregroundColor(backgroundColor).opacity(0.2)
                         Image(systemName: imageName)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color.white)
+                            .foregroundColor(backgroundColor)
                             .frame(width: 24, height: 24)
                         
                     }
