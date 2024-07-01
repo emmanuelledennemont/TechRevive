@@ -13,8 +13,11 @@ struct ReparationListItemView: View {
 
     var body: some View {
         HStack(alignment: .top) {
-            ComponentElementsTypeOfReperman(imageName: productRepair.reparingCategory.imageName, background: false, color: true)
-
+            ComponentElementsTypeOfRepairmanC(
+                imageName: productRepair.reparingCategory.imageName,
+                background: false,
+                repairStatus: productRepair.repairStatus
+            )
             .padding(.horizontal, 2.0)
 
             VStack(alignment: .leading, spacing: 2) {
