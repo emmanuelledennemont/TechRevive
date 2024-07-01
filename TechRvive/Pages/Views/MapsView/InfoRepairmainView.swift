@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 struct InfoRepairmainView: View {
+    @Environment(\.dismiss) var dismiss
     let reparman : Repairman
     var body: some View {
         HStack {

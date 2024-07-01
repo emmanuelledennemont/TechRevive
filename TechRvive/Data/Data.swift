@@ -93,16 +93,16 @@ let repairmenTabFav: [Repairman] = [
 
 
 
-let productRparDataSample = [ProductRepairs(productName: "Lave-vaisselle", modelName: "Model X100", breakDownInfo: "Ne démarre plus", idRepairMan: "Réparateur 1", reparingCategory: .bigElec, date: Date()),
-                             ProductRepairs(productName: "Mixeur", modelName: "MixPro 200", breakDownInfo: "Lame cassée", idRepairMan: "Réparateur 2", reparingCategory: .smallElec, date: Date()),
-                             ProductRepairs(productName: "Ordinateur Portable", modelName: "Laptop Z15", breakDownInfo: "Écran fissuré", idRepairMan: "Réparateur 3", reparingCategory: .device, date: Date()),
-                             ProductRepairs(productName: "Trottinette Électrique", modelName: "e-Scooter V8", repairStatus: .readyToRepair, breakDownInfo: "Batterie défectueuse", idRepairMan: "Réparateur 4", reparingCategory: .mobility, date: Date()),
-                             ProductRepairs(productName: "Réfrigérateur", modelName: "CoolerMaster 3000", repairStatus: .repairing, breakDownInfo: "Ne refroidit plus", idRepairMan: "Réparateur 5", reparingCategory: .bigElec, date: Date()),
-                             ProductRepairs(productName: "Grille-pain", modelName: "ToastMax 500", repairStatus: .readyToRepair, breakDownInfo: "Ne chauffe pas", idRepairMan: "Réparateur 6", reparingCategory: .smallElec, date: Date()),
-                             ProductRepairs(productName: "Tablette", modelName: "Tab Pro 10", repairStatus: .repared, breakDownInfo: "Problème de charge", idRepairMan: "Réparateur 7", reparingCategory: .device, date: Date()),
-                             ProductRepairs(productName: "Vélo Électrique", modelName: "e-Bike Speedster", repairStatus: .repairing, breakDownInfo: "Problème de moteur", idRepairMan: "Réparateur 8", reparingCategory: .mobility, date: Date()),
-                             ProductRepairs(productName: "Lave-linge", modelName: "Washy 800", repairStatus: .readyToRepair, breakDownInfo: "Fuite d'eau", idRepairMan: "Réparateur 9", reparingCategory: .bigElec, date: Date()),
-                             ProductRepairs(productName: "Machine à café", modelName: "CoffeeKing 700", repairStatus: .repared, breakDownInfo: "Ne s'allume pas", idRepairMan: "Réparateur 10", reparingCategory: .smallElec, date: Date())]
+let productRparDataSample = [ProductRepairs(productName: "Lave-vaisselle", modelName: "Model X100", breakDownInfo: "Ne démarre plus", idRepairMan: UUID(), reparingCategory: .bigElec, date: Date()),
+                             ProductRepairs(productName: "Mixeur", modelName: "MixPro 200", breakDownInfo: "Lame cassée", idRepairMan: UUID(), reparingCategory: .smallElec, date: Date()),
+                             ProductRepairs(productName: "Ordinateur Portable", modelName: "Laptop Z15", breakDownInfo: "Écran fissuré", idRepairMan: UUID(), reparingCategory: .device, date: Date()),
+                             ProductRepairs(productName: "Trottinette Électrique", modelName: "e-Scooter V8", repairStatus: .readyToRepair, breakDownInfo: "Batterie défectueuse", idRepairMan: UUID(), reparingCategory: .mobility, date: Date()),
+                             ProductRepairs(productName: "Réfrigérateur", modelName: "CoolerMaster 3000", repairStatus: .repairing, breakDownInfo: "Ne refroidit plus", idRepairMan: UUID(), reparingCategory: .bigElec, date: Date()),
+                             ProductRepairs(productName: "Grille-pain", modelName: "ToastMax 500", repairStatus: .readyToRepair, breakDownInfo: "Ne chauffe pas", idRepairMan: UUID(), reparingCategory: .smallElec, date: Date()),
+                             ProductRepairs(productName: "Tablette", modelName: "Tab Pro 10", repairStatus: .repared, breakDownInfo: "Problème de charge", idRepairMan: UUID(), reparingCategory: .device, date: Date()),
+                             ProductRepairs(productName: "Vélo Électrique", modelName: "e-Bike Speedster", repairStatus: .repairing, breakDownInfo: "Problème de moteur", idRepairMan: UUID(), reparingCategory: .mobility, date: Date()),
+                             ProductRepairs(productName: "Lave-linge", modelName: "Washy 800", repairStatus: .readyToRepair, breakDownInfo: "Fuite d'eau", idRepairMan: UUID(), reparingCategory: .bigElec, date: Date()),
+                             ProductRepairs(productName: "Machine à café", modelName: "CoffeeKing 700", repairStatus: .repared, breakDownInfo: "Ne s'allume pas", idRepairMan: UUID(), reparingCategory: .smallElec, date: Date())]
 
 
 

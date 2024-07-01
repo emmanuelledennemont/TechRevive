@@ -19,6 +19,7 @@ struct ReparationView: View {
     }
     
     var body: some View {
+        NavigationStack{
         List {
             Section(header: VStack(alignment: .leading) {
                 Text("Mes Réparations à venir")
@@ -29,8 +30,8 @@ struct ReparationView: View {
                 Spacer().frame(height: 10)
             }) {
                 ForEach(scheduledRepairs) { productRepair in
-                    NavigationLink(destination: ReparationDetailView()) {
-                        ReparationListItemView(productRepair: productRepair)
+                    NavigationLink(destination: ReparationViewDetails(productRepair:productRepair) ) {
+                        ReparationListItemView(productRepair: productRepair, displayProblem: true)
                     }
                 }
             }
@@ -44,12 +45,12 @@ struct ReparationView: View {
                 Spacer().frame(height: 10)
             }) {
                 ForEach(archivedRepairs) { productRepair in
-                    NavigationLink(destination: ReparationDetailView()) {
-                        ReparationListItemView(productRepair: productRepair)
+                    NavigationLink(destination: ReparationViewDetails(productRepair:productRepair)) {
+                        ReparationListItemView(productRepair: productRepair, displayProblem: true)
                     }
                 }
             }
-        }
+        }}
     }
 
 }
@@ -65,9 +66,9 @@ struct ReparationView: View {
 #Preview {
     NavigationView {
         ReparationView(user: User(name: "", repairlistScheduled: [
-            ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", repairStatus: .readyToRepair, breakDownInfo: "Accumulation de Glace", idRepairMan: "hhfd", reparingCategory: .bigElec, date: Date()),
-            
-            ProductRepairs(productName: "Angell Bike", modelName: "ANG123456789", repairStatus: .repared, breakDownInfo: "Problème de Batterie", idRepairMan: "hhfd", reparingCategory: .mobility, date: Date())
+            ProductRepairs(productName: "LG InstaView Door-in-Door", modelName: "LMXS28596S", repairStatus: .readyToRepair, breakDownInfo: "Accumulation de Glace", idRepairMan: UUID(), reparingCategory: .bigElec, date: Date()),
+
+            ProductRepairs(productName: "Angell Bike", modelName: "ANG123456789", repairStatus: .repared, breakDownInfo: "Problème de Batterie", idRepairMan: UUID(), reparingCategory: .mobility, date: Date())
         ], repairListArchive: [], co2Eco: 0.0, eurEco: 0.0, favReparmain: repairmenFav))
     }
 }

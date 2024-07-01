@@ -5,7 +5,7 @@ import SwiftUI
 
 struct ReparationScheduledListView: View {
     @State  var user : User
-    
+
     var body: some View {
         NavigationStack {
             ScrollView() {
@@ -45,7 +45,7 @@ struct ReparationScheduledListView: View {
 
 
                                 VStack(alignment: .leading) {
-                                    Text(repair.idRepairMan)
+                                    Text(repair.findRepairmanName())
                                         .font(.title3)
                                         .bold()
 
@@ -103,10 +103,22 @@ struct ReparationScheduledListView: View {
 
 
 struct DetailView: View {
+
+    @State var isPresented = false
+    @State var dismisToggle = false
     var body: some View {
-        Text("Détails de l'article")
+        ZStack {
+            Button(action: {
+                isPresented.toggle()
+
+            }, label: {
+                Text("dismiss")
+            })
             .navigationBarTitle("Détails", displayMode: .inline)
-    }
+            if isPresented {
+                CustomAlertView(show: $dismisToggle)
+            }
+        }    }
 }
 
 struct BottomShadowModifier: ViewModifier {

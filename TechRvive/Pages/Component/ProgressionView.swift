@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProgressionView: View {
     @Binding var status: RepairStatus
+    var descriptionPanne : String
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -33,7 +34,7 @@ struct ProgressionView: View {
             VStack(alignment: .leading) {
                 Text("Panne")
                     .font(.subheadline)
-                Text("Accumulation Glace")
+                Text(descriptionPanne)
                     .font(.caption)
                     .foregroundColor(.gray)
             }

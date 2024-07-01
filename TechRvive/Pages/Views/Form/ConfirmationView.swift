@@ -9,8 +9,10 @@ import SwiftUI
 
 
 struct CustomAlertView: View {
+    @Environment(\.dismiss) var dismiss
     @Binding var show: Bool
     
+
     var body: some View {
         VStack {
             Spacer()
@@ -31,6 +33,7 @@ struct CustomAlertView: View {
                 
                 Button(action: {
                     show = false
+                    dismiss()
                 }) {
                     Text(ConfirmationText.buttonTitle.rawValue)
                         .foregroundColor(.orange)

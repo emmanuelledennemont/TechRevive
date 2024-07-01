@@ -5,11 +5,19 @@
 //  Created by Ezequiel Gomes on 21/06/2024.
 //
 
-import Foundation
+enum RepairStatus: Int, CaseIterable {
+    case readyToRepair = 0
+    case repairing
+    case repared
 
-
-enum RepairStatus: String {
-    case readyToRepair = "A réparer"
-    case repairing = "En réparation"
-    case repared = "Déjà réparer"
+    var status: String {
+        switch self {
+        case .readyToRepair:
+            return "À réparer"
+        case .repairing:
+            return "En réparation"
+        case .repared:
+            return "Déjà réparé"
+        }
+    }
 }

@@ -91,6 +91,4 @@ fileprivate extension UIView {
     }
 }
 
-#Preview {
-    ContentView()
-}
+

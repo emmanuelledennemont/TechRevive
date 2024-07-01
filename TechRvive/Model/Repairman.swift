@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 
 struct Repairman : Identifiable {
+    var image = ""
     let id =  UUID()
     var name : String
     var info : String
@@ -21,25 +22,34 @@ struct Repairman : Identifiable {
 
 
 
-    func getadress() -> String {
+    func getadress() async -> String {
         let cordonateCLocation = CLLocation(coordinate: adress, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: Date())
         let geocoder = CLGeocoder()
         var adressString = ""
-        geocoder.reverseGeocodeLocation(cordonateCLocation) { place, error in
-            if let safeError = error {
-                adressString = "Pas de position trouvé\n veuillez réessayer "
-            }
-            else if let safePlace = place {
-              
-                for index in safePlace{
-                    adressString += index.name ?? "-"
-                    adressString += "\n \(index.postalCode ?? "-")"
-                    adressString += index.locality ?? "-"
 
+        return await withCheckedContinuation { continuation in
+            geocoder.reverseGeocodeLocation(cordonateCLocation) { place, error in
+                if let safeError = error {
+                    adressString = "Pas de position trouvé\n veuillez réessayer "
+                    continuation.resume(returning: adressString)
+                }
+                else if let safePlace = place {
+
+                    for index in safePlace{
+
+                        adressString = index.name ?? "-"
+                        adressString += "\n \(index.postalCode ?? "-") "
+                        adressString += index.locality ?? "-"
+
+
+                    }
+                    continuation.resume(returning: adressString)
+                    // return adressString
                 }
             }
         }
-        return adressString
+
+
     }
 
 }

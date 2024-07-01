@@ -27,6 +27,18 @@
 		E359835F2C2DB47900F2A61C /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E359835A2C2DB47900F2A61C /* StatView.swift */; };
 		E35983642C2DB93500F2A61C /* ReparationListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983602C2DB93500F2A61C /* ReparationListItemView.swift */; };
 		E35983652C2DB93500F2A61C /* ReparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35983612C2DB93500F2A61C /* ReparationView.swift */; };
+		E378EC932C2ED3CD00050802 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378EC922C2ED3CD00050802 /* CustomButton.swift */; };
+		E378EC972C2F2BD700050802 /* RepairmainInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378EC962C2F2BD700050802 /* RepairmainInfoView.swift */; };
+		E378EC992C2F2CBD00050802 /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378EC982C2F2CBD00050802 /* ActionButtonView.swift */; };
+		E378EC9B2C30103400050802 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378EC9A2C30103400050802 /* CircularProgressView.swift */; };
+		E378EC9F2C30108700050802 /* ReparationStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378EC9E2C30108700050802 /* ReparationStatusView.swift */; };
+		E378ECA12C30109400050802 /* ReparationViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECA02C30109400050802 /* ReparationViewDetails.swift */; };
+		E378ECA32C3010AF00050802 /* DescriptionCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECA22C3010AF00050802 /* DescriptionCardComponent.swift */; };
+		E378ECA52C3010B700050802 /* ListItemCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECA42C3010B700050802 /* ListItemCardComponent.swift */; };
+		E378ECA72C30113500050802 /* ProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECA62C30113500050802 /* ProgressionView.swift */; };
+		E378ECA92C317A6600050802 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECA82C317A6600050802 /* SearchView.swift */; };
+		E378ECAB2C31930600050802 /* ButtonShettHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECAA2C31930600050802 /* ButtonShettHelpers.swift */; };
+		E378ECAD2C32B36000050802 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECAC2C32B36000050802 /* Splash.swift */; };
 		E3936E762C2E0C7400AEA85C /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */; };
 		E3936E782C2E0C9C00AEA85C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3936E772C2E0C9C00AEA85C /* Text.swift */; };
 		E3D12E152C25B27E00890AD3 /* Repairman.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E142C25B27E00890AD3 /* Repairman.swift */; };
@@ -36,7 +48,7 @@
 		E3D12E1D2C25B72F00890AD3 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E1C2C25B72F00890AD3 /* TabBarModel.swift */; };
 		E3D12E1F2C25B7E700890AD3 /* ReparingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E1E2C25B7E700890AD3 /* ReparingCategory.swift */; };
 		E3D12E212C25BB0400890AD3 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E202C25BB0400890AD3 /* ActionButton.swift */; };
-		E3D12E2D2C25CE9E00890AD3 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */; };
+		E3D12E2D2C25CE9E00890AD3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E2C2C25CE9E00890AD3 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +73,18 @@
 		E359835A2C2DB47900F2A61C /* StatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 		E35983602C2DB93500F2A61C /* ReparationListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparationListItemView.swift; sourceTree = "<group>"; };
 		E35983612C2DB93500F2A61C /* ReparationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparationView.swift; sourceTree = "<group>"; };
+		E378EC922C2ED3CD00050802 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E378EC962C2F2BD700050802 /* RepairmainInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairmainInfoView.swift; sourceTree = "<group>"; };
+		E378EC982C2F2CBD00050802 /* ActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
+		E378EC9A2C30103400050802 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		E378EC9E2C30108700050802 /* ReparationStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparationStatusView.swift; sourceTree = "<group>"; };
+		E378ECA02C30109400050802 /* ReparationViewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparationViewDetails.swift; sourceTree = "<group>"; };
+		E378ECA22C3010AF00050802 /* DescriptionCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCardComponent.swift; sourceTree = "<group>"; };
+		E378ECA42C3010B700050802 /* ListItemCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCardComponent.swift; sourceTree = "<group>"; };
+		E378ECA62C30113500050802 /* ProgressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressionView.swift; sourceTree = "<group>"; };
+		E378ECA82C317A6600050802 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E378ECAA2C31930600050802 /* ButtonShettHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonShettHelpers.swift; sourceTree = "<group>"; };
+		E378ECAC2C32B36000050802 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		E3936E772C2E0C9C00AEA85C /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		E3D12E142C25B27E00890AD3 /* Repairman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repairman.swift; sourceTree = "<group>"; };
@@ -70,7 +94,7 @@
 		E3D12E1C2C25B72F00890AD3 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		E3D12E1E2C25B7E700890AD3 /* ReparingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReparingCategory.swift; sourceTree = "<group>"; };
 		E3D12E202C25BB0400890AD3 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		E3D12E2C2C25CE9E00890AD3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +128,8 @@
 		D98C49862C25A63E0010CA2D /* TechRvive */ = {
 			isa = PBXGroup;
 			children = (
+				E378ECAC2C32B36000050802 /* Splash.swift */,
+				E378ECAA2C31930600050802 /* ButtonShettHelpers.swift */,
 				D98C49872C25A63E0010CA2D /* TechRviveApp.swift */,
 				E3D12E222C25BCD600890AD3 /* Pages */,
 				E3D12E132C25B23300890AD3 /* Model */,
@@ -125,8 +151,10 @@
 		E34D0B992C29B134004E14D9 /* MapsView */ = {
 			isa = PBXGroup;
 			children = (
+				E378ECA82C317A6600050802 /* SearchView.swift */,
 				E34D0B9A2C29B165004E14D9 /* MapView.swift */,
 				E34D0B9E2C2AAE94004E14D9 /* InfoRepairmainView.swift */,
+				E378EC962C2F2BD700050802 /* RepairmainInfoView.swift */,
 			);
 			path = MapsView;
 			sourceTree = "<group>";
@@ -134,7 +162,13 @@
 		E34D0BA22C2AB0E6004E14D9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				E378ECA62C30113500050802 /* ProgressionView.swift */,
+				E378ECA42C3010B700050802 /* ListItemCardComponent.swift */,
+				E378ECA22C3010AF00050802 /* DescriptionCardComponent.swift */,
+				E378EC9A2C30103400050802 /* CircularProgressView.swift */,
+				E378EC922C2ED3CD00050802 /* CustomButton.swift */,
 				E34D0BA02C2AB0DB004E14D9 /* ComponentElements.swift */,
+				E378EC982C2F2CBD00050802 /* ActionButtonView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -201,10 +235,28 @@
 		E35983632C2DB93500F2A61C /* Reparation */ = {
 			isa = PBXGroup;
 			children = (
+				E378EC9D2C30107400050802 /* detail */,
+				E378EC9C2C30106900050802 /* List */,
+			);
+			path = Reparation;
+			sourceTree = "<group>";
+		};
+		E378EC9C2C30106900050802 /* List */ = {
+			isa = PBXGroup;
+			children = (
 				E35983602C2DB93500F2A61C /* ReparationListItemView.swift */,
 				E35983612C2DB93500F2A61C /* ReparationView.swift */,
 			);
-			path = Reparation;
+			path = List;
+			sourceTree = "<group>";
+		};
+		E378EC9D2C30107400050802 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				E378ECA02C30109400050802 /* ReparationViewDetails.swift */,
+				E378EC9E2C30108700050802 /* ReparationStatusView.swift */,
+			);
+			path = detail;
 			sourceTree = "<group>";
 		};
 		E3D12E132C25B23300890AD3 /* Model */ = {
@@ -226,7 +278,7 @@
 		E3D12E222C25BCD600890AD3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				E3D12E2C2C25CE9E00890AD3 /* LandingPage.swift */,
+				E3D12E2C2C25CE9E00890AD3 /* Home.swift */,
 				E34D0BA22C2AB0E6004E14D9 /* Component */,
 				E352C38D2C2B092A00587B0D /* Views */,
 			);
@@ -308,18 +360,28 @@
 				E3936E762C2E0C7400AEA85C /* ConfirmationView.swift in Sources */,
 				E352C3942C2B0FB500587B0D /* Repairmen.swift in Sources */,
 				E3D12E192C25B4EE00890AD3 /* ProductRepairs.swift in Sources */,
+				E378EC932C2ED3CD00050802 /* CustomButton.swift in Sources */,
 				E352C38F2C2B09D200587B0D /* ReparationScheduledListView.swift in Sources */,
-				E3D12E2D2C25CE9E00890AD3 /* LandingPage.swift in Sources */,
+				E378ECA72C30113500050802 /* ProgressionView.swift in Sources */,
+				E3D12E2D2C25CE9E00890AD3 /* Home.swift in Sources */,
+				E378EC972C2F2BD700050802 /* RepairmainInfoView.swift in Sources */,
 				E34D0B9B2C29B165004E14D9 /* MapView.swift in Sources */,
+				E378EC9F2C30108700050802 /* ReparationStatusView.swift in Sources */,
 				E359835E2C2DB47900F2A61C /* ProfileView.swift in Sources */,
+				E378ECA12C30109400050802 /* ReparationViewDetails.swift in Sources */,
 				E35983542C2DA9F900F2A61C /* DatePicker.swift in Sources */,
 				E3D12E152C25B27E00890AD3 /* Repairman.swift in Sources */,
 				E35983522C2DA9AD00F2A61C /* CategoriesView.swift in Sources */,
 				E35983652C2DB93500F2A61C /* ReparationView.swift in Sources */,
 				E3D12E1B2C25B64F00890AD3 /* RepairStatus.swift in Sources */,
+				E378EC9B2C30103400050802 /* CircularProgressView.swift in Sources */,
+				E378ECA52C3010B700050802 /* ListItemCardComponent.swift in Sources */,
+				E378ECA92C317A6600050802 /* SearchView.swift in Sources */,
 				E352C39B2C2D560B00587B0D /* AppointmentView.swift in Sources */,
 				E359835C2C2DB47900F2A61C /* EcoView.swift in Sources */,
+				E378ECAD2C32B36000050802 /* Splash.swift in Sources */,
 				E35983642C2DB93500F2A61C /* ReparationListItemView.swift in Sources */,
+				E378EC992C2F2CBD00050802 /* ActionButtonView.swift in Sources */,
 				E3D12E212C25BB0400890AD3 /* ActionButton.swift in Sources */,
 				E359835D2C2DB47900F2A61C /* FavoriteView.swift in Sources */,
 				E359835F2C2DB47900F2A61C /* StatView.swift in Sources */,
@@ -327,7 +389,9 @@
 				E352C3962C2BFF7200587B0D /* SwiftUIViewTest.swift in Sources */,
 				E3D12E1D2C25B72F00890AD3 /* TabBarModel.swift in Sources */,
 				E3936E782C2E0C9C00AEA85C /* Text.swift in Sources */,
+				E378ECAB2C31930600050802 /* ButtonShettHelpers.swift in Sources */,
 				E352C3912C2B0A3100587B0D /* Data.swift in Sources */,
+				E378ECA32C3010AF00050802 /* DescriptionCardComponent.swift in Sources */,
 				D98C49882C25A63E0010CA2D /* TechRviveApp.swift in Sources */,
 				E3D12E1F2C25B7E700890AD3 /* ReparingCategory.swift in Sources */,
 				E34D0BA12C2AB0DB004E14D9 /* ComponentElements.swift in Sources */,

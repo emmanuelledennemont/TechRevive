@@ -29,7 +29,7 @@ struct Splash: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .scaleEffect(scaleAmount)
-                    .frame(width: 35)
+                    .frame(width: 25)
             }
         }
         .onAppear {

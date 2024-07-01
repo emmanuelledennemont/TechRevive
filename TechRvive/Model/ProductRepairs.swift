@@ -13,15 +13,16 @@ class ProductRepairs : ObservableObject, Identifiable  {
     let id = UUID()
     @Published var productName : String
     @Published  var modelName : String
-     var repairStatus : RepairStatus = .readyToRepair
+    var repairStatus : RepairStatus = .repared
     @Published var breakDownInfo : String
-    @Published var idRepairMan : String
+    @Published var idRepairMan : UUID
     @Published var reparingCategory : ReparingCategory
     @Published var date : Date
+    @Published var isValid = false
 
 
 
-    init(productName: String, modelName: String, repairStatus: RepairStatus, breakDownInfo: String, idRepairMan: String, reparingCategory: ReparingCategory, date: Date){
+    init(productName: String, modelName: String, repairStatus: RepairStatus, breakDownInfo: String, idRepairMan: UUID, reparingCategory: ReparingCategory, date: Date){
         self.productName = productName
         self.modelName = modelName
         self.repairStatus = repairStatus 
@@ -32,7 +33,7 @@ class ProductRepairs : ObservableObject, Identifiable  {
 
     }
 
-    init(productName: String, modelName: String, breakDownInfo: String, idRepairMan: String, reparingCategory: ReparingCategory, date: Date) {
+    init(productName: String, modelName: String, breakDownInfo: String, idRepairMan: UUID, reparingCategory: ReparingCategory, date: Date) {
         self.productName = productName
         self.modelName = modelName
         self.breakDownInfo = breakDownInfo
@@ -45,13 +46,44 @@ class ProductRepairs : ObservableObject, Identifiable  {
         self.productName = ""
         self.modelName = ""
         self.breakDownInfo = ""
-        self.idRepairMan = ""
+        self.idRepairMan = UUID()
         self.reparingCategory = .bigElec
         self.date = Date()
     }
 
-    func modifyDate(date : Date){
-        self.date = date
+    func checkText()  {
+
+        isValid = false
+
+
+
+
     }
-}
+
+
+
+    func fliedFunc () {
+        guard !productName.isEmpty, !breakDownInfo.isEmpty  else {
+
+
+            return
+        }
+        isValid = true
+
+    }
+
+    func findRepairman() -> Repairman? {
+        return repairmenExemple.findRepairmen(id: idRepairMan)
+    }
+
+
+
+    func findRepairmanName() -> String {
+        let repairman: Repairman? = findRepairman()
+        if let safeRepairman = repairman {
+             return safeRepairman.name
+        }
+        return "-"
+    }
+    }
 

@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct AppointmentView: View {
+    @Environment(\.dismiss) var dismiss
+    @Binding var user : User
+
     let reparman : Repairman
-    @State var infoRepair = ProductRepairs()
-    @State private var selectedCategory = ReparingCategory.bigElec
+    @ObservedObject var infoRepair = ProductRepairs()
+
+    @Binding var showConfirmation : Bool
 
     let categories = ReparingCategory.allCases
 
@@ -19,61 +23,109 @@ struct AppointmentView: View {
     var body: some View {
 
         Group {
-            Form(content: {
-                Section{
-                    HStack {
-                        ComponentElementsTypeOfReperman(imageName: reparman.reparingCategory.imageName, background: false, color: true)
 
-                        VStack(alignment: .leading  ){
-                            Text(reparman.name).font(.title3).fontWeight(.bold)
-                            Text(reparman.reparingCategory.rawValue).font(.caption).foregroundStyle(.gray)
-                        }.padding(.horizontal)
+                Form(content: {
+                    Section{
+                        HStack {
+                            ComponentElementsTypeOfReperman(imageName: reparman.reparingCategory.imageName, background: false, color: true)
+
+                            VStack(alignment: .leading  ){
+                                Text(reparman.name).font(.title3).fontWeight(.bold)
+                                Text(reparman.reparingCategory.rawValue).font(.caption).foregroundStyle(.gray)
+                            }.padding(.horizontal)
+                        }
                     }
-                }
-                Section("Votre Appareil") {
+                    Section("Votre Appareil") {
 
+                            HStack{
+                                Text("Appareil: ")
+                                TextField("Nom votre appareil ", text: $infoRepair.productName).onSubmit {
+                                    infoRepair.fliedFunc()
+                                }
+                            }
                         HStack{
-                            Text("Appareil: ")
-                            TextField("Nom votre appareil ", text: $infoRepair.productName)
+                            Text("Modèle: ")
+                            TextField("Modèle de votre appareil ", text: $infoRepair.modelName)
                         }
 
+                            HStack{
+                                Text("Description:")
+
+                                TextField("Description de la panne", text: $infoRepair.breakDownInfo).onSubmit {
+                                    infoRepair.fliedFunc()
+                                }
+                            }
+
+
+
+                    }
+                    Section ("Categories") {
+                        HStack {
+                            ForEach(categories) { category in
+                                CategoryButton(category: category, selectedCategory: $infoRepair.reparingCategory)
+                            }
+                        }
+                    }
+                    Section("Vos information ") {
                         HStack{
-                            Text("Description:")
-
-                            TextField("Description de la panne", text: $infoRepair.breakDownInfo)
-                        }
-
-
-
-                }
-                Section ("Categories") {
-                    HStack {
-                        ForEach(categories) { category in
-                            CategoryButton(category: category, selectedCategory: $selectedCategory)
+                            Text("Nom:")
+                            TextField("Description de la panne", text: $infoRepair.productName)
                         }
                     }
-                }
-                Section("Vos information ") {
-                    HStack{
-                        Text("Nom:")
-                        TextField("Description de la panne", text: $infoRepair.productName)
+                    Section("Choisir votre date") {
+                        DatePickerView(selectedDate: $infoRepair.date)
+
                     }
-                }
-                Section("Choisir votre date") {
-                    DatePickerView(selectedCategory: selectedCategory, infoRepair: $infoRepair)
-                }
+                    Section {
+                        
+                            CustomButton(title: "Confirmer", action: {
+
+                                infoRepair.idRepairMan = reparman.id
+                                user.repairlistScheduled.append(infoRepair)
+
+                                showConfirmation.toggle()
+                                dismiss()
+
+                            }, isFilled: true).disabled(!infoRepair.isValid)
+
+
+                        CustomButton(title: "Annuler", action: {
+                            dismiss()
+                            //Annuler : réinitialiser la date à sa valeur d'origine
+                         //   selectedDate = originalDate
+                        }, isFilled: false)
+
+
+                        
 
 
 
-            }).navigationTitle("Prise de RDV")
+
+                    }
+                    Section{
+
+                        // Réduire le padding en haut du bouton
+
+
+                    }
+
+
+
+                }).navigationTitle("Prise de RDV")
+
+
+
+            }
+
+
         }
 
     }
-}
+
 
 #Preview {
     NavigationStack {
-        AppointmentView(reparman: parisRepairmen.repairmenListe[0])
+        AppointmentView(user: .constant(userTest), reparman: parisRepairmen.repairmenListe[0], showConfirmation:.constant(false))
     }
 
 }

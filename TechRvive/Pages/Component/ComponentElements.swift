@@ -47,6 +47,36 @@ struct ComponentElementsTypeOfReperman: View {
 }
 
 
+struct ComponentElementsTypeOfRepairmanC: View {
+    let imageName: String
+    let background: Bool
+    let repairStatus: RepairStatus
+    @State private var colorForeground = Color(.systemGray4)
+
+    var body: some View {
+        ZStack {
+            if background {
+                Circle()
+                    .foregroundStyle(Color(.systemGray6))
+                    .frame(width: 75)
+            }
+
+            Image(systemName: imageName)
+                .foregroundColor(colorForeground)
+                .font(.system(size: 40))
+        }
+        .onAppear {
+            switch repairStatus {
+            case .repared:
+                colorForeground = Color(.systemGray4)
+            default:
+                colorForeground = Color(.orange)
+            }
+        }
+    }
+}
+
+
 #Preview {
     ComponentElementsTypeOfReperman(imageName: "microwave.fill", background: true, color: false)
 }
