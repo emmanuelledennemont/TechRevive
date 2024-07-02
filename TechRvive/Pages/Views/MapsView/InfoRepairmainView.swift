@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 struct InfoRepairmainView: View {
+   
     @Environment(\.dismiss) var dismiss
     let reparman : Repairman
     var body: some View {
@@ -23,5 +24,5 @@ struct InfoRepairmainView: View {
 }
 
 #Preview {
-    InfoRepairmainView(reparman: Repairman(image: "r", name: "Réparateur 1", info: "Expert en gros électroménager", adress: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522), phoneNumber: "0102030405", openingHours: "8h-18h", reparingCategory: .bigElec))
+    InfoRepairmainView(reparman: Repairman( name: "Réparateur 1", info: "Expert en gros électroménager", adress: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522), phoneNumber: "0102030405", openingHours: "8h-18h", reparingCategory: .bigElec ,image: "r"))
 }

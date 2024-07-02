@@ -22,6 +22,25 @@ struct Repairmen  {
     }
 
 
+    func filter( categorie : ReparingCategory?, recycle : Bool) -> Repairmen {
+
+
+        let filterList =  self.repairmenListe.filter { repaimain in
+            repaimain.recycle == recycle
+        }
+
+        if let safeCategorie = categorie {
+
+        let filterListReturn =  filterList.filter { repaimain in
+            repaimain.reparingCategory == safeCategorie
+            }
+
+            return Repairmen(repairmenListe: filterListReturn)
+
+        }
+        return Repairmen(repairmenListe: filterList)
+    }
+
 
 //
 //    func findRepairmenCity(city: String )-> [Repairman] {

@@ -40,6 +40,7 @@
 		E378ECAB2C31930600050802 /* ButtonShettHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECAA2C31930600050802 /* ButtonShettHelpers.swift */; };
 		E378ECAD2C32B36000050802 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECAC2C32B36000050802 /* Splash.swift */; };
 		E378ECAF2C32DE1900050802 /* ProfilComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECAE2C32DE1900050802 /* ProfilComponent.swift */; };
+		E378ECB12C33E2D500050802 /* ModalPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378ECB02C33E2D500050802 /* ModalPresentation.swift */; };
 		E3936E762C2E0C7400AEA85C /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */; };
 		E3936E782C2E0C9C00AEA85C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3936E772C2E0C9C00AEA85C /* Text.swift */; };
 		E3D12E152C25B27E00890AD3 /* Repairman.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D12E142C25B27E00890AD3 /* Repairman.swift */; };
@@ -87,6 +88,7 @@
 		E378ECAA2C31930600050802 /* ButtonShettHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonShettHelpers.swift; sourceTree = "<group>"; };
 		E378ECAC2C32B36000050802 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		E378ECAE2C32DE1900050802 /* ProfilComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilComponent.swift; sourceTree = "<group>"; };
+		E378ECB02C33E2D500050802 /* ModalPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentation.swift; sourceTree = "<group>"; };
 		E3936E752C2E0C7400AEA85C /* ConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		E3936E772C2E0C9C00AEA85C /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		E3D12E142C25B27E00890AD3 /* Repairman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repairman.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		E3D12E132C25B23300890AD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E378ECB02C33E2D500050802 /* ModalPresentation.swift */,
 				E3D12E142C25B27E00890AD3 /* Repairman.swift */,
 				E352C3952C2BFF7200587B0D /* SwiftUIViewTest.swift */,
 				E352C3932C2B0FB500587B0D /* Repairmen.swift */,
@@ -397,6 +400,7 @@
 				E378ECA32C3010AF00050802 /* DescriptionCardComponent.swift in Sources */,
 				D98C49882C25A63E0010CA2D /* TechRviveApp.swift in Sources */,
 				E3D12E1F2C25B7E700890AD3 /* ReparingCategory.swift in Sources */,
+				E378ECB12C33E2D500050802 /* ModalPresentation.swift in Sources */,
 				E34D0BA12C2AB0DB004E14D9 /* ComponentElements.swift in Sources */,
 				E378ECAF2C32DE1900050802 /* ProfilComponent.swift in Sources */,
 			);

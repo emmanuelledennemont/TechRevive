@@ -13,81 +13,90 @@ struct MapView: View {
   
     @State var inputSearch = ""
     @State var selectedCategorie = ReparingCategory.bigElec
-    @State  private var userLocation : MapCameraPosition = .userLocation(fallback: .automatic)
-    @State private var isPresented = false
+    @State private var userLocation : MapCameraPosition = .userLocation(fallback: .automatic)
+    @State private var presentationDetentsSelection = PresentationDetent.height(90)
 
+    @State  var repairmen : Repairmen
 
-    let repairmen : Repairmen
+  //  @EnvironmentObject  private  var isPresented : ModalPresentation
+    @State var isPresented = false
 
     var body: some View {
         NavigationStack {
-            ZStack {
-                Map(position: $userLocation){
-                    UserAnnotation().foregroundStyle(.orange)
-                    ForEach(repairmen.repairmenListe){ repairman in
+            
+            VStack{
+                ZStack {
+                    Map(position: $userLocation){
+                        UserAnnotation().foregroundStyle(.orange)
+                        ForEach(repairmen.repairmenListe){ repairman in
 
 
-                        Annotation(repairman.name, coordinate:repairman.adress){
-                            NavigationLink {
-                                RepairmainInfoView(repairman: repairman)
-                            } label: {
-                                ComponentElementsButtonMap(imageName: repairman.reparingCategory.imageName)
-                            }
+                            Annotation(repairman.name, coordinate:repairman.adress){
+                                NavigationLink {
+                                    RepairmainInfoView(repairman: repairman)
+                                } label: {
+                                    ComponentElementsButtonMap(imageName: repairman.reparingCategory.imageName)
+                                }
 
 
-    //                        Button(action: {
-    //
-    //                        }, label: {
-    //                            ComponentElementsButtonMap(imageName: repairman.reparingCategory.imageName)
-    //                        })
+        //                        Button(action: {
+        //
+        //                        }, label: {
+        //                            ComponentElementsButtonMap(imageName: repairman.reparingCategory.imageName)
+        //                        })
 
 
-                                  }
-                    }
+                                      }
+                        }
 
 
-                }.mapControls({
-                    MapCompass()
-                    MapUserLocationButton().foregroundStyle(.orange)
-                    MapScaleView()
+                    }.mapControls({
+                        MapCompass()
+                        MapUserLocationButton().foregroundStyle(.orange)
+                        MapScaleView()
 
 
-                })
-              
+                    })
 
+
+
+                }
+                Button("Show Sheet") {
+                    isPresented.toggle()
+                        }.sheet(isPresented: $isPresented, content: {
+
+                            SearchView(cameraposition: $userLocation, repaimen: $repairmen, presentationDetentsSelection: $presentationDetentsSelection)
+                                .padding()
+
+                            .presentationDetents([.height(90), .height(340), .large], selection: $presentationDetentsSelection)
+
+                            .presentationCornerRadius(20)
+                            .presentationBackground(Color(.systemGray6))
+                            .presentationBackgroundInteraction(.enabled(upThrough: .large))
+                            .interactiveDismissDisabled()
+                            //.bottomMaskForSheet()
+
+                    }).navigationTitle("Carte").navigationBarHidden(true).edgesIgnoringSafeArea(.bottom)
 
             }
 
+        }
 
-            .navigationTitle("Carte").navigationBarHidden(true)
 
-        }.sheet(isPresented: $isPresented, content: {
-
-            SearchView()
-                .padding()
-
-            .presentationDetents([.height(90), .medium, .large])
-            .presentationCornerRadius(20)
-            .presentationBackground(Color(.systemGray6))
-            .presentationBackgroundInteraction(.enabled(upThrough: .large))
-            .interactiveDismissDisabled()
-            .bottomMaskForSheet()
-
-    })
 
 
             .onAppear{
                 CLLocationManager().requestWhenInUseAuthorization()
+                Task{
+                   // isPresented.isPresented.toggle()
+                }
 
-            }.task {
-                isPresented = true
             }
-
 
     }
 }
-
-#Preview {
-    MapView( repairmen: Repairmen(repairmenListe: repairmen))
-}
+//
+//#Preview {
+//    MapView( repairmen: Repairmen(repairmenListe: repairmen)).environment(ModalPresentation())
+//}
 

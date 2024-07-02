@@ -8,8 +8,11 @@
 import Foundation
 import CoreLocation
 
-struct Repairman : Identifiable {
-    var image : String
+struct Repairman : Identifiable, Equatable {
+
+
+
+
     let id =  UUID()
     var name : String
     var info : String
@@ -17,6 +20,8 @@ struct Repairman : Identifiable {
     var phoneNumber : String
     var openingHours : String
     var reparingCategory : ReparingCategory
+    var recycle = false
+    var image : String
 
 
 
@@ -50,6 +55,11 @@ struct Repairman : Identifiable {
         }
 
 
+    }
+
+
+    static func == (lhs: Repairman, rhs: Repairman) -> Bool {
+        lhs.id == rhs.id
     }
 
 }

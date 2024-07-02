@@ -58,6 +58,39 @@ struct CategoryButton: View {
         .buttonStyle(PlainButtonStyle())
     }
 }
+
+
+
+struct CategoryButtonBis: View {
+    var category: ReparingCategory
+    @Binding var selectedCategory: ReparingCategory?
+
+    var body: some View {
+        Button(action: {
+            if selectedCategory == category {
+                selectedCategory = nil
+            }
+            else {
+                selectedCategory = category
+
+            }
+                   }) {
+            VStack {
+
+                ComponentElementsTypeOfReperman(imageName: category.imageName, background: true, color: selectedCategory == category)
+
+                Text(category.rawValue)
+                    .font(.caption)
+                    .foregroundColor(selectedCategory == category ? .orange : .black)
+
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+}
+
+
+
 #Preview {
     CategoriesView()
 }

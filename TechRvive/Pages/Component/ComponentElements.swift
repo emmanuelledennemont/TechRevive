@@ -14,7 +14,7 @@ struct ComponentElementsButtonMap: View {
 
             Circle()
                 .fill(Color.orange).frame(width: 50)
-            Image(systemName: imageName).foregroundStyle(.white).font(.title)
+            Image(systemName: imageName).font(.title).foregroundStyle(.white)
 
         }
     }
@@ -32,10 +32,10 @@ struct ComponentElementsTypeOfReperman: View {
         ZStack {
             if background {
                 Circle()
-                    .foregroundStyle(Color(.systemGray6)).frame(width: 75)
+                    .foregroundStyle(Color(.systemGray6)).frame(width: 60)
             }
 
-            Image(systemName: imageName).foregroundStyle(color ? Color.orange : Color(.systemGray2)).font(.system(size: 40))
+            Image(systemName: imageName).foregroundStyle(color ? Color.orange : Color(.systemGray2)).font(.system(size: 30))
 
         }
 //        .task {

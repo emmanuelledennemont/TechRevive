@@ -10,6 +10,7 @@ import MapKit
 
 struct RepairmainInfoView: View {
 
+    @EnvironmentObject var user : User
     @State  var repairman : Repairman
     @State var adress = ""
     @State var isPresented = false
@@ -76,7 +77,8 @@ struct RepairmainInfoView: View {
                         ActionButtonView(title: "Appel", imageName: "phone") {
                             // Action for Call
                         }
-                        ActionButtonView(title: "Favori", imageName: "star") {
+                        ActionButtonView(title: "Favori", imageName: "star", isHighlighted: user.isfavorite(repermain: repairman)) {
+                            user.favReparmain.repairmenListe.append(repairman)
                             // Action for Favorite
                         }
                     }
@@ -187,6 +189,8 @@ struct RepairmainInfoView: View {
                 CustomAlertView(show: $isPresented)
 
             }
+        }.onAppear(){
+           // modalPresentation.isPresented = false
         }
 
 

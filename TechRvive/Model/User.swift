@@ -52,4 +52,11 @@ class User : Observable, ObservableObject {
         }
         return count
     }
+
+
+    func isfavorite(repermain : Repairman) -> Bool {
+        return self.favReparmain.repairmenListe.contains(where: { repairmanTab in
+            repairmanTab == repermain
+        })
+    }
 }

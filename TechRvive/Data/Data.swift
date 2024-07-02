@@ -43,55 +43,62 @@ let lyonCoordinates = [
 
 let repairmen = [
     Repairman(
-        image: "reparateur2",
         name: "Ahmed",
         info: "Tout type de réparation",
         adress: CLLocationCoordinate2D(latitude: 43.6045, longitude: 1.4442), // Toulouse Centre
         phoneNumber: "0823942834",
         openingHours: "6-19h",
-        reparingCategory: .mobility
+        reparingCategory: .mobility,
+        image: "reparateur2"
     ),
     Repairman(
-        image: "reparateur3",
         name: "Luc",
         info: "Tout type de réparation",
         adress: CLLocationCoordinate2D(latitude: 43.6100, longitude: 1.4350), // Capitole
         phoneNumber: "0823942835",
         openingHours: "6-19h",
-        reparingCategory: .device
+        reparingCategory: .bigElec,
+        image: "reparateur3"
     ),
     Repairman(
-        image: "reparateur4",
         name: "Sophie",
         info: "Tout type de réparation",
         adress: CLLocationCoordinate2D(latitude: 43.5980, longitude: 1.4434), // Saint-Cyprien
         phoneNumber: "0823942836",
         openingHours: "6-19h",
-        reparingCategory: .bigElec
-    ),
+        reparingCategory: .device,
+        image: "reparateur4"
+    )]
+
+
+let repairmenNonFavori = [
     Repairman(
-        image: "reparateur5",
         name: "Jean",
         info: "Tout type de réparation",
         adress: CLLocationCoordinate2D(latitude: 43.6156, longitude: 1.4521), // Minimes
         phoneNumber: "0823942837",
         openingHours: "6-19h",
-        reparingCategory: .mobility
+        reparingCategory: .smallElec,
+        image: "reparateur5"
     ),
     Repairman(
-        image: "reparateur6",
         name: "Marie",
         info: "Tout type de réparation",
         adress: CLLocationCoordinate2D(latitude: 43.5833, longitude: 1.4333), // Rangueil
         phoneNumber: "0823942838",
         openingHours: "6-19h",
-        reparingCategory: .smallElec
+        reparingCategory: .bigElec,
+        image: "reparateur6"
     )
 ]
 
 
 
 
+var repairmenType = Repairmen(repairmenListe: repairmen+repairmenNonFavori)
+
+
+var repairmenTypeFav = Repairmen(repairmenListe: repairmen)
 
 
 
@@ -100,7 +107,9 @@ let repairmen = [
 
 
 
-let userTest = User(image: "user", name: "Jéremie Achour", repairlistScheduled: [], repairListArchive: [], co2Eco: 12, eurEco: 22, favReparmain: Repairmen(repairmenListe: repairmen), adressMail: "jeremie.achour@icloud.com", telephone: " +33 0 6 56 67 85 44")
+
+
+let userTest = User(image: "user", name: "Jéremie Achour", repairlistScheduled: [], repairListArchive: [], co2Eco: 12, eurEco: 22, favReparmain:repairmenTypeFav, adressMail: "jeremie.achour@icloud.com", telephone: " +33 0 6 56 67 85 44")
 
 
 

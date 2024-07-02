@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ReparationView: View {
     @EnvironmentObject var user : User
+    @EnvironmentObject  private  var isPresented : ModalPresentation
 
     var scheduledRepairs: [ProductRepairs] {
         user.repairlistScheduled.filter { $0.repairStatus != .repared }
@@ -20,37 +21,41 @@ struct ReparationView: View {
     
     var body: some View {
         NavigationStack{
-        List {
-            Section(header: VStack(alignment: .leading) {
-                Text("Mes Réparations à venir")
-                    .font(.title2)
-                    .foregroundColor(.black)
-                    .textCase(.none)
-                    .fontWeight(.bold)
-                Spacer().frame(height: 10)
-            }) {
-                ForEach(scheduledRepairs) { productRepair in
-                    NavigationLink(destination: ReparationViewDetails(productRepair:productRepair) ) {
-                        ReparationListItemView(productRepair: productRepair, displayProblem: true)
+            List {
+                Section(header: VStack(alignment: .leading) {
+                    Text("Mes Réparations à venir")
+                        .font(.title2)
+                        .foregroundColor(.black)
+                        .textCase(.none)
+                        .fontWeight(.bold)
+                    Spacer().frame(height: 10)
+                }) {
+                    ForEach(scheduledRepairs) { productRepair in
+                        NavigationLink(destination: ReparationViewDetails(productRepair:productRepair) ) {
+                            ReparationListItemView(productRepair: productRepair, displayProblem: true)
+                        }
                     }
                 }
+
+                Section(header: VStack(alignment: .leading) {
+                    Text("Historique de Réparations")
+                        .font(.title2)
+                        .foregroundColor(.black)
+                        .textCase(.none)
+                        .fontWeight(.bold)
+                    Spacer().frame(height: 10)
+                }) {
+                    ForEach(archivedRepairs) { productRepair in
+                        NavigationLink(destination: ReparationViewDetails(productRepair:productRepair)) {
+                            ReparationListItemView(productRepair: productRepair, displayProblem: true)
+                        }
+                    }
+                }
+            }.onAppear(){
+                isPresented.isPresented = false
             }
 
-            Section(header: VStack(alignment: .leading) {
-                Text("Historique de Réparations")
-                    .font(.title2)
-                    .foregroundColor(.black)
-                    .textCase(.none)
-                    .fontWeight(.bold)
-                Spacer().frame(height: 10)
-            }) {
-                ForEach(archivedRepairs) { productRepair in
-                    NavigationLink(destination: ReparationViewDetails(productRepair:productRepair)) {
-                        ReparationListItemView(productRepair: productRepair, displayProblem: true)
-                    }
-                }
-            }
-        }}
+        }
     }
 
 }
