@@ -37,8 +37,8 @@ struct EcoView: View {
             }
             Spacer().frame(height: 8)
             Text(title)
-                .font(.headline)
-                .foregroundColor(.gray)
+                .font(.body).fontWeight(.bold)
+                .foregroundColor(.gray).padding(.top)
         }
         .frame(maxWidth: .infinity)
         .padding()

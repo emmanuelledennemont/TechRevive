@@ -11,7 +11,7 @@ struct ReparationView: View {
     @EnvironmentObject var user : User
 
     var scheduledRepairs: [ProductRepairs] {
-        user.repairlistScheduled.filter { $0.repairStatus != .repared }
+        user.repairlistScheduled.filter { $0.repairStatus == .repairing }
     }
     
     var archivedRepairs: [ProductRepairs] {
@@ -19,10 +19,11 @@ struct ReparationView: View {
     }
     
     var body: some View {
+
         NavigationStack{
             List {
                 Section(header: VStack(alignment: .leading) {
-                    Text("Mes Réparations à venir")
+                    Text("Mes Réparations en cours")
                         .font(.title2)
                         .foregroundColor(.black)
                         .textCase(.none)

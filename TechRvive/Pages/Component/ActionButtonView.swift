@@ -19,9 +19,9 @@ struct ActionButtonView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 10).stroke(.orange,lineWidth: 2).background(isHighlighted ? Color.orange.opacity(0.2) : .white).clipShape(RoundedRectangle(cornerRadius: 10)).frame( width : 75 , height: 60 )
                 VStack(spacing : 8) {
-                    Image(systemName:  isHighlighted ?  imageName+".fill" : imageName).foregroundColor(.orange)
+                    Image(systemName:  isHighlighted ?  imageName+".fill" : imageName).font(.title).foregroundColor(.orange)
 
-                    Text(title).foregroundColor(.orange)                }
+                    Text(title).foregroundColor(.orange).font(.footnote)                }
             }
 
         }

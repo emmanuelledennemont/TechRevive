@@ -5,81 +5,93 @@ import SwiftUI
 
 struct ReparationScheduledListView: View {
     @EnvironmentObject  var user : User
+    var scheduledRepairs: [ProductRepairs] {
+        user.repairlistScheduled.filter { $0.repairStatus == .readyToRepair }
+    }
 
     var body: some View {
         NavigationStack {
-            ScrollView() {
-                ForEach(user.repairlistScheduled) { repair in
 
-                        VStack {
-                            HStack {
+                ScrollView() {
+                        VStack(alignment: .leading) {
+                        Text("Mes Prochains RDV").font(.title2)
+                            .foregroundColor(.black)
+                            .textCase(.none)
+                            .fontWeight(.bold)
+                        ForEach(user.repairlistScheduled) { repair in
 
-                                    createDatePicker(
-                                        label: "Date",
-                                        date: repair.date,
-                                        displayedComponents: [.date]
-                                    ) { newDate in
+                                VStack {
+                                    HStack {
 
-                                    }.disabled(true)
+                                            createDatePicker(
+                                                label: "Date",
+                                                date: repair.date,
+                                                displayedComponents: [.date]
+                                            ) { newDate in
 
-                                    Spacer()
-                                        .padding()
-                                    
-                                    createDatePicker(
-                                        label: "Heure",
-                                        date: repair.date,
-                                        displayedComponents: [.hourAndMinute]
-                                    ) { newDate in
+                                            }.disabled(true)
 
-                                    }.disabled(false)
+                                            Spacer()
+                                                .padding()
+                                            
+                                            createDatePicker(
+                                                label: "Heure",
+                                                date: repair.date,
+                                                displayedComponents: [.hourAndMinute]
+                                            ) { newDate in
 
-                            }
-                            .padding(.top)
+                                            }.disabled(false)
 
-                            Divider()
-                                .background(Color.gray)
-                                .padding(.horizontal)
-                            
-                            HStack(alignment: .center) {
-                                ComponentElementsTypeOfReperman(imageName:  repair.reparingCategory.imageName, background: false, color: true)
-
-
-                                VStack(alignment: .leading) {
-                                    Text(repair.findRepairmanName())
-                                        .font(.title3)
-                                        .bold()
-
-                                    Text(repair.productName)
-                                        .foregroundColor(.gray)
-                                }
-
-                                Spacer()
-
-                                NavigationLink(destination: DetailView()) {
-                                    HStack(spacing: 5) {
-                                        Text("Voir plus")
-                                            .foregroundColor(.orange)
-                                            .underline()
-
-                                        Image(systemName: "chevron.right")
-                                            .foregroundColor(.orange)
                                     }
-                                }
-                            }
-                            .padding()
-                        }
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .modifier(BottomShadowModifier(radius: 2, yOffset: 2))
+                                    .padding(.top)
 
-                    .padding(.horizontal)
+                                    Divider()
+                                        .background(Color.gray)
+                                        .padding(.horizontal)
+                                    
+                                    HStack(alignment: .center) {
+                                        ComponentElementsTypeOfReperman(imageName:  repair.reparingCategory.imageName, background: false, color: true)
+
+
+                                        VStack(alignment: .leading) {
+                                            Text(repair.findRepairmanName())
+                                                .font(.headline)
+                                                .bold()
+
+                                            Text(repair.productName)
+                                                .foregroundColor(.gray).font(.footnote)
+
+                                        }
+
+                                        Spacer()
+
+                                        NavigationLink(destination: ReparationViewDetails(productRepair: repair)) {
+                                            HStack(spacing: 5) {
+                                                Text("Voir plus")
+                                                    .foregroundColor(.orange)
+                                                    .underline()
+
+                                                Image(systemName: "chevron.right")
+                                                    .foregroundColor(.orange)
+                                            }
+                                        }
+                                    }
+                                    .padding()
+                                }
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .modifier(BottomShadowModifier(radius: 2, yOffset: 2))
+
+                            .padding(.horizontal)
+                        }
+                        Spacer()
+                    }
+                    .padding()
                 }
-                Spacer()
             }
-            .padding()
-            .navigationBarTitle("Mes Prochain RDV ")
-            
-        }
+
+
+
     }
     
     private func createDatePicker(
@@ -140,5 +152,5 @@ struct BottomShadowModifier: ViewModifier {
 }
 
 #Preview {
-    ReparationScheduledListView()
+    ReparationScheduledListView().environmentObject(userTest)
 }

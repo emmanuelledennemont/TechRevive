@@ -23,10 +23,6 @@ struct SearchView: View {
 
     var body: some View {
 
-    
-
-            ScrollView {
-
                 VStack(spacing: 25) {
 
                     HStack {
@@ -81,7 +77,7 @@ struct SearchView: View {
                     Picker(selection: $selectedOption, label: Text("")) {
                         Text("Recycler").tag(true)
                         Text("Réparer").tag(false)
-                    }
+                    }.disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                     .pickerStyle(SegmentedPickerStyle())
                     .frame(width: 200) // Ajustez la largeur selon vos besoins
 
@@ -101,22 +97,24 @@ struct SearchView: View {
                             }
                         }.padding().background().clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 10)))// Ajoutez un padding à gauche pour l'espacement
                     }
-                    if !historySearch.isEmpty {
+                    if !historySearch.isEmpty  && botomPositionSheet != .relative(0.5) {
                         VStack (alignment : .leading) {
                             Text("Mes Recherches Récentes").foregroundStyle(.gray)
                                 .font(.headline)
                                 .fontWeight(.semibold)
                                 .padding(.leading)
-                            ZStack( alignment: .topLeading) {
-                                RoundedRectangle(cornerRadius: 15).foregroundColor(.white)
+                            ZStack(alignment: .topLeading) {
+                                RoundedRectangle(cornerRadius: 15).foregroundColor(.white).frame(height: 65*CGFloat(historySearch.count))
                                 VStack (alignment : .leading, spacing :8) {
-                                ForEach(historySearch, id: \.self) { raw in
+
+                                    ForEach(historySearch, id: \.self) { raw in
 
                                         HStack {
                                             ComponentElementsTypeOfReperman(imageName: "magnifyingglass", background: true, color: false).frame(height: 45)
                                             Text(raw)
                                         }
-                                        Divider()
+
+
 
                                     }
                                 }.padding(.top)
@@ -127,40 +125,54 @@ struct SearchView: View {
                     }
 
 
-                    VStack(alignment : .leading) {
-                        Text("Les Plus Proches").foregroundStyle(.gray)
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .padding(.leading)
+                    if botomPositionSheet != .relative(0.5) {
 
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 15).foregroundColor(.white)
-                            VStack(spacing: 8) {
-                                ForEach(user.favReparmain.repairmenListe) { repairmain in
+                        VStack(alignment : .leading) {
+                            Text("Les Plus Proches").foregroundStyle(.gray)
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                                .padding(.leading)
 
-                                    FavoriteView(imageName: repairmain.image, name: repairmain.name, address:"" )
-                                    Divider()
+                            ZStack(alignment: .topLeading) {
+                                RoundedRectangle(cornerRadius: 15).foregroundColor(.white).frame(height: 185)
+                                VStack() {
+                                    ForEach(repaimen.repairmenListe.indices) { index in
+                                        if index<3 {
+                                            NavigationLink {
+                                                RepairmainInfoView(repairman: repaimen.repairmenListe[index])
+                                            } label: {
+                                                FavoriteView(imageName: repaimen.repairmenListe[index].image, name: repaimen.repairmenListe[index].name, reparingCategorie: repaimen.repairmenListe[index].reparingCategory )
 
+                                            }
 
-                                }
+                                        }
+
+                                    }
+                                }.padding(.horizontal)
+
                             }.padding(.horizontal)
+                        }
 
-                        }.padding(.horizontal).padding(.top)
                     }
-
 
                     Spacer()
 
                 }
-            }.onChange(of: selectedCategorie, {
-                repaimen = repairmenType.filter(categorie: selectedCategorie, recycle: selectedOption)
+            .onChange(of: selectedCategorie, {
+                repaimen = Repairmen(repairmenListe: repairmen).filter(categorie: selectedCategorie, recycle: selectedOption)
             }).onChange(of: selectedOption, {
-                repaimen = repairmenType.filter(categorie: selectedCategorie, recycle: selectedOption)
+                repaimen = Repairmen(repairmenListe: repairmen).filter(categorie: selectedCategorie, recycle: selectedOption)
             })
 
 
             .onSubmit {
-                historySearch.append(inputSearch)
+                if historySearch.count > 2 {
+                    historySearch[0] = inputSearch
+                }
+                else{
+                    historySearch.append(inputSearch)
+                }
+
                 Task{
                     cordinate =  await researchCity(city: inputSearch)
                     cameraposition = MapCameraPosition.region(MKCoordinateRegion(center: cordinate, latitudinalMeters: 7500, longitudinalMeters: 7500))
@@ -208,6 +220,6 @@ struct SearchView: View {
 
 }
 
-#Preview {
-    SearchView(cameraposition: .constant(.userLocation(fallback: .automatic)), repaimen: .constant(repairmenType), botomPositionSheet: .constant(BottomSheetPosition.relative(0.5))).environment(userTest)
-}
+//#Preview {
+//    SearchView(cameraposition: .constant(.userLocation(fallback: .automatic)), repaimen: .constant(repairmenType), botomPositionSheet: .constant(BottomSheetPosition.relative(0.5))).environment(userTest)
+//}

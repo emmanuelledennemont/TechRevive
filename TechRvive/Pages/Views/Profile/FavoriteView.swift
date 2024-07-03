@@ -10,8 +10,8 @@ import SwiftUI
 struct FavoriteView: View {
     let imageName: String
     let name: String
-    let address: String
-    
+    let reparingCategorie: ReparingCategory
+
     var body: some View {
         HStack {
             Image(imageName)
@@ -21,10 +21,9 @@ struct FavoriteView: View {
                 .padding(.trailing, 8)
 
             VStack(alignment: .leading) {
-                Text(name)
-                    .font(.body)
-                    .fontWeight(.semibold)
-                Text(address)
+                Text(name).fontWeight(.semibold)
+                    .font(.body).foregroundStyle(.black)
+                Text(reparingCategorie.rawValue)
                     .font(.caption)
                     .foregroundColor(.gray)
             }
@@ -40,5 +39,5 @@ struct FavoriteView: View {
 
 
 #Preview {
-    FavoriteView(imageName: "", name: "", address: "")
+    FavoriteView(imageName: "", name: "", reparingCategorie: ReparingCategory.device)
 }

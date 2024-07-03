@@ -56,9 +56,9 @@ struct RepairmainInfoView: View {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10).stroke(.orange,lineWidth: 2).clipShape(RoundedRectangle(cornerRadius: 10)).frame( width : 75 , height: 60 )
                                 VStack(spacing : 8) {
-                                    Image(systemName: "calendar").foregroundColor(.orange)
+                                    Image(systemName: "calendar").font(.title).foregroundColor(.orange)
 
-                                    Text("RDV").foregroundColor(.orange)                }
+                                    Text("RDV").foregroundColor(.orange).font(.footnote)              }
                             }
 
 
@@ -66,7 +66,7 @@ struct RepairmainInfoView: View {
                         }
 
 
-                        ActionButtonView(title: "Itinéraire", imageName: "location") {
+                        ActionButtonView(title: "Itinéraire", imageName: "arrow.uturn.right.square.fill") {
                             let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: repairman.adress))
                             mapItem.name = adress
                             mapItem.openInMaps(launchOptions: [

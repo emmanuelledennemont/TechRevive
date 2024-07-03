@@ -40,9 +40,8 @@ struct AppointmentView: View {
 
                             HStack{
                                 Text("Appareil: ")
-                                TextField("Nom votre appareil ", text: $infoRepair.productName).onSubmit {
-                                    infoRepair.fliedFunc()
-                                }
+                                TextField("Nom votre appareil ", text: $infoRepair.productName)
+
                             }
                         HStack{
                             Text("Modèle: ")
@@ -52,16 +51,14 @@ struct AppointmentView: View {
                             HStack{
                                 Text("Description:")
 
-                                TextField("Description de la panne", text: $infoRepair.breakDownInfo).onSubmit {
-                                    infoRepair.fliedFunc()
-                                }
+                                TextField("Description de la panne", text: $infoRepair.breakDownInfo)
                             }
 
 
 
                     }
                     Section ("Categories") {
-                        HStack {
+                        HStack (spacing : 15) {
                             ForEach(categories) { category in
                                 CategoryButton(category: category, selectedCategory: $infoRepair.reparingCategory)
                             }
@@ -75,7 +72,7 @@ struct AppointmentView: View {
 
                     }
                     Section {
-                        
+
                             CustomButton(title: "Confirmer", action: {
 
                                 infoRepair.idRepairMan = reparman.id
@@ -84,14 +81,16 @@ struct AppointmentView: View {
                                 showConfirmation.toggle()
                                 dismiss()
 
-                            }, isFilled: true).disabled(!infoRepair.isValid)
-
+                            }, isFilled: infoRepair.isValid).disabled(!infoRepair.isValid)
+                        if !infoRepair.isValid {
+                            Text("Merci de remplir les champs Appareil et description ").font(.caption).foregroundStyle(.red)
+                        }
 
                         CustomButton(title: "Annuler", action: {
                             dismiss()
                             //Annuler : réinitialiser la date à sa valeur d'origine
                          //   selectedDate = originalDate
-                        }, isFilled: false)
+                        }, isFilled: true)
 
 
                         
@@ -100,16 +99,15 @@ struct AppointmentView: View {
 
 
                     }
-                    Section{
-
-                        // Réduire le padding en haut du bouton
-
-
-                    }
 
 
 
-                }).navigationTitle("Prise de RDV")
+                }).onChange(of: infoRepair.productName) {
+                    infoRepair.fliedFunc()
+
+                }.onChange(of: infoRepair.breakDownInfo) {
+                    infoRepair.fliedFunc()}
+                .formStyle(.grouped).navigationTitle("Prise de RDV")
 
 
 

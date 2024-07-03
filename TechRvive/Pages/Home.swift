@@ -13,7 +13,7 @@ struct Home: View {
 
         TabView {
 
-            MapView(repairmen: repairmenType).tabItem {
+            MapView(repairmen: Repairmen(repairmenListe: repairmen)).tabItem {
                 Image(systemName: "map.fill")
                 Text("Carte")
             }

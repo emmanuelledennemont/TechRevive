@@ -38,8 +38,8 @@ struct StatView: View {
                 }
                 Spacer().frame(height: 8)
                 Text(title)
-                    .font(.headline)
-                    .foregroundColor(.gray)
+                    .font(.body).fontWeight(.bold)
+                    .foregroundColor(.gray).padding(.top)
                     
             }
            

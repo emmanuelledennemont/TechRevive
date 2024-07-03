@@ -47,9 +47,15 @@ struct ProfileView: View {
                         .padding(.leading)
                     
                     VStack(spacing: 8) {
-                        ForEach(user.favReparmain.repairmenListe) { repairmain in
+                        ForEach(user.favReparmain.repairmenListe) { repairman in
+                            NavigationLink {
+                                RepairmainInfoView(repairman: repairman)
+                            } label: {
+                                FavoriteView(imageName: repairman.image, name: repairman.name,reparingCategorie: repairman.reparingCategory )
+                            }
 
-                            FavoriteView(imageName: repairmain.image, name: repairmain.name, address:"" )
+
+
 
 
                         }

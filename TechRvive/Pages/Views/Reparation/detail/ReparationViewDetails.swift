@@ -1,15 +1,19 @@
 import SwiftUI
+import MapKit
 
 struct ReparationViewDetails: View {
 
     var productRepair: ProductRepairs
-
+    var repairman : Repairman {
+        productRepair.findRepairman() ?? Repairman(name: "-", info: "-", adress: CLLocationCoordinate2D(), phoneNumber: "-", openingHours: "_", reparingCategory: .device, image: "")
+    }
+    @State private var address = ""
 
     var body: some View {
         HStack() {
             VStack( spacing: 10) {
                 VStack(alignment: .leading, spacing: 5 ){
-                    ListItemCard(imageName: "repairman", name: "Repartout", address: "Rue Arènes Romaines, 31100 Toulouse", actionButtonVisibility: false)
+                    ListItemCard(imageName:repairman.image, name: repairman.name, address: address, actionButtonVisibility: false)
                     Divider()
                     ReparationListItemView(productRepair: productRepair, displayProblem: false)
                 }
@@ -72,8 +76,10 @@ struct ReparationViewDetails: View {
             }
             .padding()
             
+        }.task {
+            address = await repairman.getadress()
         }
-      
+
     }
     
     

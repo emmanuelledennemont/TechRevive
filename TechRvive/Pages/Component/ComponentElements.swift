@@ -38,11 +38,11 @@ struct ComponentElementsTypeOfReperman: View {
             Image(systemName: imageName).foregroundStyle(color ? Color.orange : Color(.systemGray2)).font(.system(size: 30))
 
         }
-//        .task {
-//            if color {
-//                colorForeground = Color(.orange)
-//            }
-//        }
+        //        .task {
+        //            if color {
+        //                colorForeground = Color(.orange)
+        //            }
+        //        }
     }
 }
 
@@ -51,6 +51,7 @@ struct ComponentElementsTypeOfRepairmanC: View {
     let imageName: String
     let background: Bool
     let repairStatus: RepairStatus
+    var isdetail : Bool
     @State private var colorForeground = Color(.systemGray4)
 
     var body: some View {
@@ -66,11 +67,17 @@ struct ComponentElementsTypeOfRepairmanC: View {
                 .font(.system(size: 40))
         }
         .onAppear {
-            switch repairStatus {
-            case .repared:
-                colorForeground = Color(.systemGray4)
-            default:
+            if !isdetail {
                 colorForeground = Color(.orange)
+            }
+            else {
+                switch repairStatus {
+                case .repared:
+                    colorForeground = Color(.systemGray4)
+                default:
+                    colorForeground = Color(.orange)
+                }
+
             }
         }
     }

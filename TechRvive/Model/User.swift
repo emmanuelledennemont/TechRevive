@@ -37,12 +37,12 @@ class User : Observable, ObservableObject {
 
 
     func howManyToday() -> Int {
-        let dateFormatter = DateFormatter()
+        
         var count = 0
+        let calendar = Calendar.current
         for productRepair in repairlistScheduled {
-        print(productRepair.date)
-        print(Date())
-            if dateFormatter.string(from:productRepair.date) == dateFormatter.string(from: Date()) {
+
+            if calendar.isDateInToday(productRepair.date) {
 
                 count += 1
 

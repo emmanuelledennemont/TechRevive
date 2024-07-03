@@ -50,7 +50,7 @@ struct MapView: View {
                 })
                 
                 
-            }.bottomSheet(bottomSheetPosition: $botomPositionSheet, switchablePositions: [.relative(0.3),.relative(0.5), .relative(0.9999)], content: {
+            }.bottomSheet(bottomSheetPosition: $botomPositionSheet, switchablePositions: [.relative(0.2),.relative(0.5), .relative(0.9999)], content: {
                 SearchView(cameraposition: $userLocation, repaimen: $repairmen,botomPositionSheet: $botomPositionSheet)
             })
             

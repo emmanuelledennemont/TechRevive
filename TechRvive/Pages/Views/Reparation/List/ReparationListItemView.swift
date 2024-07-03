@@ -11,13 +11,14 @@ import Foundation
 struct ReparationListItemView: View {
     var productRepair: ProductRepairs
     var displayProblem : Bool
-    @State var reparingStatusTemporary = RepairStatus.readyToRepair
+
+
     var body: some View {
         HStack(alignment: .top) {
             ComponentElementsTypeOfRepairmanC(
                 imageName: productRepair.reparingCategory.imageName,
                 background: false,
-                repairStatus: reparingStatusTemporary
+                repairStatus: productRepair.repairStatus, isdetail: displayProblem
             )
             .padding(.horizontal, 2.0)
 
@@ -26,23 +27,16 @@ struct ReparationListItemView: View {
                     .font(.headline)
                     .fontWeight(.semibold)
                 Text(productRepair.modelName)
-                    .font(.callout)
+                    .font(.footnote)
                     .foregroundColor(.secondary)
                 if displayProblem {
                     Text(productRepair.breakDownInfo)
-                        .font(.subheadline)
+                        .font(.footnote)
                 }
 
             }
         }
-        .padding(.vertical, 8).task {
-            if displayProblem == false {
-                reparingStatusTemporary = .readyToRepair
-            }
-            else {
-                reparingStatusTemporary = productRepair.repairStatus
-            }
-        }
+        .padding(.vertical, 8)
     }
 }
 
