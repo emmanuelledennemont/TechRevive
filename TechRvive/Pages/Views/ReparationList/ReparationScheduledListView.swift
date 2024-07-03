@@ -5,7 +5,6 @@ import SwiftUI
 
 struct ReparationScheduledListView: View {
     @EnvironmentObject  var user : User
-    @EnvironmentObject  private  var isPresented : ModalPresentation
 
     var body: some View {
         NavigationStack {
@@ -79,9 +78,7 @@ struct ReparationScheduledListView: View {
             }
             .padding()
             .navigationBarTitle("Mes Prochain RDV ")
-            .onAppear(){
-                isPresented.isPresented = false
-            }
+            
         }
     }
     

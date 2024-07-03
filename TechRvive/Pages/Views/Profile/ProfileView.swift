@@ -11,7 +11,6 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var user : User
-    @EnvironmentObject  private  var isPresented : ModalPresentation
     var body: some View {
         NavigationView {
             ScrollView {
@@ -61,14 +60,12 @@ struct ProfileView: View {
                 }
                 .padding(.top)
             }
-            .navigationBarTitleDisplayMode(.inline).onAppear(){
-                isPresented.isPresented = false
-            }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
 #Preview {
-    ProfileView().environment(userTest).environment(ModalPresentation())
+    ProfileView().environment(userTest)
 }
 

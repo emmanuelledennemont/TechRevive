@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import BottomSheet
 
 struct SearchView: View {
     @EnvironmentObject var user : User
@@ -15,15 +16,14 @@ struct SearchView: View {
     @State var selectedCategorie : ReparingCategory?
     @Binding var cameraposition : MapCameraPosition
     @State var cordinate = CLLocationCoordinate2D()
-    @State private var selectedOption = true // Option par défaut
+    @State private var selectedOption = false // Option par défaut
     @State var historySearch : [String] = []
     @Binding var repaimen : Repairmen
-    @Binding var presentationDetentsSelection : PresentationDetent
+    @Binding  var botomPositionSheet : BottomSheetPosition
 
     var body: some View {
 
-        ZStack {
-            Color(Color(.systemGray6)).ignoresSafeArea()
+    
 
             ScrollView {
 
@@ -60,10 +60,13 @@ struct SearchView: View {
                         .cornerRadius(8)
 
                         Button(action: {
-                            if presentationDetentsSelection == .height(90) {
-                                presentationDetentsSelection = .height(340)
+                            if botomPositionSheet == .relative(0.2) {
+                                botomPositionSheet = .relative(0.5)
                             }
-                          
+                            else {
+                                botomPositionSheet = .relative(0.2)
+                            }
+
 
                         }) {
                             Image(systemName: "line.3.horizontal.decrease.circle.fill")
@@ -160,7 +163,7 @@ struct SearchView: View {
                 historySearch.append(inputSearch)
                 Task{
                     cordinate =  await researchCity(city: inputSearch)
-                    cameraposition = MapCameraPosition.region(MKCoordinateRegion(center: cordinate, latitudinalMeters: 100, longitudinalMeters: 100))
+                    cameraposition = MapCameraPosition.region(MKCoordinateRegion(center: cordinate, latitudinalMeters: 7500, longitudinalMeters: 7500))
 
                 }
 
@@ -169,11 +172,6 @@ struct SearchView: View {
 
 
             }
-        }
-
-
-
-
 
 
     }
@@ -211,5 +209,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView(cameraposition: .constant(.userLocation(fallback: .automatic)), repaimen: .constant(repairmenType), presentationDetentsSelection: .constant(PresentationDetent.height(90))).environment(userTest)
+    SearchView(cameraposition: .constant(.userLocation(fallback: .automatic)), repaimen: .constant(repairmenType), botomPositionSheet: .constant(BottomSheetPosition.relative(0.5))).environment(userTest)
 }

@@ -11,14 +11,13 @@ import SwiftUI
 struct TechRviveApp: App {
 
     let user = userTest
-    let modal = ModalPresentation()
     var body: some Scene {
         WindowGroup {
 
 
            //AppointmentView(reparman:  parisRepairmen.repairmenListe[0])
            // MapView(repairmen: repairmenExemple)
-            Splash().environment(user).environment(modal)
+            Splash().environment(user)
 
         }
     }

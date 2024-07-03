@@ -54,19 +54,19 @@ struct RepairmainInfoView: View {
                             AppointmentView(reparman: repairman, showConfirmation: $isPresented)
                         } label: {
                             ZStack {
-                                RoundedRectangle(cornerRadius: 10).stroke(.gray, lineWidth: 0).background(Color(.systemGray6)).clipShape(RoundedRectangle(cornerRadius: 10)).frame( width : 75 , height: 60 )
+                                RoundedRectangle(cornerRadius: 10).stroke(.orange,lineWidth: 2).clipShape(RoundedRectangle(cornerRadius: 10)).frame( width : 75 , height: 60 )
                                 VStack(spacing : 8) {
-                                    Image(systemName: "calendar")
-                                        .foregroundColor(.gray)
-                                    Text("RDV").foregroundColor(.gray).font(.footnote)
-                                }
+                                    Image(systemName: "calendar").foregroundColor(.orange)
+
+                                    Text("RDV").foregroundColor(.orange)                }
                             }
+
 
 
                         }
 
 
-                        ActionButtonView(title: "Itinéraire", imageName: "location", isHighlighted: true) {
+                        ActionButtonView(title: "Itinéraire", imageName: "location") {
                             let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: repairman.adress))
                             mapItem.name = adress
                             mapItem.openInMaps(launchOptions: [
@@ -181,16 +181,14 @@ struct RepairmainInfoView: View {
                 }
 
             }
-                    .task {
-                        adress = await repairman.getadress()
-                }
+            .task {
+                adress = await repairman.getadress()
+            }
 
             if isPresented {
                 CustomAlertView(show: $isPresented)
 
             }
-        }.onAppear(){
-           // modalPresentation.isPresented = false
         }
 
 
@@ -200,7 +198,7 @@ struct RepairmainInfoView: View {
 
     }
 
-   
+
 
 
 }

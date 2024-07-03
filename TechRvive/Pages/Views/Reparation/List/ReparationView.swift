@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ReparationView: View {
     @EnvironmentObject var user : User
-    @EnvironmentObject  private  var isPresented : ModalPresentation
 
     var scheduledRepairs: [ProductRepairs] {
         user.repairlistScheduled.filter { $0.repairStatus != .repared }
@@ -51,8 +50,6 @@ struct ReparationView: View {
                         }
                     }
                 }
-            }.onAppear(){
-                isPresented.isPresented = false
             }
 
         }
